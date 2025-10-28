@@ -13,16 +13,16 @@ export default function TyresServices() {
             className="inline-flex items-center justify-center rounded-md px-2 py-0.5 text-xs font-medium mb-4
                        bg-[#B62025]/10 text-[#B62025] dark:bg-[#B62025]/30 dark:text-[#FF4B4B]"
           >
-            Quality Used Car Parts
+            Tyre Replacement & Services
           </span>
 
           {/* Heading */}
           <h1
             className="text-4xl lg:text-5xl font-black mb-6 text-black dark:text-white"
           >
-            All{" "}
+            Quality{" "}
             <span className="text-[#B62025] dark:text-[#FF4B4B]">
-              Second Hand Car Parts
+              Tyres & Wheel Care
             </span>
           </h1>
 
@@ -31,7 +31,12 @@ export default function TyresServices() {
             className="text-xl max-w-3xl mx-auto leading-relaxed 
                        text-[#333333] dark:text-[#CCCCCC]"
           >
-            Looking for quality used car parts? We’ve got you covered! With a vast range of parts in stock across multiple warehouses in Leicestershire, we’re confident we have what you need. On the rare chance we don’t, we’ll source it for you quickly. Enjoy next-day delivery or collect your parts at your convenience.
+            Choose us for your tyre replacement and enjoy top-notch service with
+            unbeatable value! We offer a wide selection of quality new and
+            budget-friendly tyres to help you save on costs without compromising
+            safety. Plus, we’ll take care of disposing of your old tyres
+            responsibly and provide professional wheel alignment for optimal
+            performance and durability.
           </p>
 
           {/* CTA Buttons */}

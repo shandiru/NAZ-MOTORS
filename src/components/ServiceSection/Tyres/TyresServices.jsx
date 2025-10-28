@@ -1,59 +1,57 @@
 "use client";
 
 import {
-  FaCogs,
-  FaTruckLoading,
-  FaSearch,
-  FaShieldAlt,
+  FaCarSide,
+  FaRecycle,
+  FaCog,
+  FaBalanceScale,
   FaRegCheckCircle,
 } from "react-icons/fa";
 
-export default function AllSecondServices() {
+export default function TyresServices() {
   const services = [
     {
-      title: "Extensive Parts Inventory",
-      desc: "Thousands of quality used car parts available for all makes and models.",
-      icon: <FaCogs className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      title: "Wide Tyre Selection",
+      desc: "Choose from a wide range of quality new and budget-friendly tyres to suit all vehicles and budgets.",
+      icon: <FaCarSide className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Engines, gearboxes, and brakes",
-        "Body panels and bumpers",
-        "Interior and exterior trims",
-        "Electrical components",
+        "Premium and budget options available",
+        "Tyres for all car makes and models",
+        "Winter, summer, and all-season tyres",
+        "Expert fitting and balancing service",
       ],
     },
     {
-      title: "Fast Nationwide Delivery",
-      desc: "Get your parts quickly and efficiently — wherever you are in the UK.",
-      icon: (
-        <FaTruckLoading className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />
-      ),
+      title: "Professional Wheel Alignment",
+      desc: "Ensure maximum performance, handling, and tyre longevity with precision wheel alignment.",
+      icon: <FaCog className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Next-day delivery available",
-        "Tracked courier service",
-        "Collection available in-house",
-        "Safe packaging for fragile items",
+        "Computerised alignment technology",
+        "Improved fuel efficiency",
+        "Even tyre wear",
+        "Smoother, safer driving experience",
       ],
     },
     {
-      title: "Parts Sourcing Assistance",
-      desc: "Can’t find what you need? Our team will source it for you fast.",
-      icon: <FaSearch className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      title: "Eco-Friendly Tyre Disposal",
+      desc: "We dispose of your old tyres responsibly, ensuring minimal environmental impact.",
+      icon: <FaRecycle className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Dedicated sourcing experts",
-        "Access to nationwide stock network",
-        "Quick turnaround time",
-        "Quality guarantee on every find",
+        "Environmentally friendly recycling",
+        "Sustainable disposal methods",
+        "Zero waste to landfill",
+        "Certified eco practices",
       ],
     },
     {
-      title: "Quality & Warranty Assurance",
-      desc: "Every part is inspected and tested to meet strict quality standards.",
-      icon: <FaShieldAlt className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      title: "Unbeatable Value & Safety",
+      desc: "Save on costs without compromising safety with our unbeatable tyre services.",
+      icon: <FaBalanceScale className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Thorough quality checks",
-        "Reliable and tested components",
-        "Warranty on selected items",
-        "Buy with confidence every time",
+        "Affordable prices with no hidden fees",
+        "Trusted brands and expert advice",
+        "Guaranteed quality and durability",
+        "Safety-first fitting every time",
       ],
     },
   ];
@@ -64,10 +62,11 @@ export default function AllSecondServices() {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black dark:text-white">
-            Quality Second Hand Car Parts & Services
+            Professional Tyre Replacement & Services
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-[#333333] dark:text-[#CCCCCC]">
-            Explore our range of used parts and services — quality, affordability, and reliability all under one roof.
+            Top-quality tyres, professional alignment, and eco-friendly disposal — 
+            all handled with care, value, and expertise by Naz Motors.
           </p>
         </div>
 

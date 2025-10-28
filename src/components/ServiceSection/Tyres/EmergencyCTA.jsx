@@ -16,15 +16,19 @@ export default function EmergencyCTA() {
       style={{ backgroundColor: palette.primary, color: palette.text }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          Find the Right Used Car Part — Fast & Reliable
+          Top-Quality Tyres with Unbeatable Value
         </h2>
 
+        {/* Subheading */}
         <p className="text-xl mb-8 opacity-90">
-          Contact our friendly sales team today to find the perfect part for your vehicle. 
-          We stock thousands of quality used car parts ready for next-day delivery or collection!
+          Contact our friendly team today for professional tyre replacement,
+          balancing, and alignment. We offer premium and budget tyres to suit
+          every vehicle and every budget — without compromising on safety.
         </p>
 
+        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {/* Call Button */}
           <a href="tel:01162515961" className="inline-block">
@@ -46,7 +50,7 @@ export default function EmergencyCTA() {
             </button>
           </a>
 
-          {/* Browse Parts Button */}
+          {/* Book Tyre Service Button */}
           <a
             href="/contact"
             className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold border transition-all duration-300"
@@ -63,7 +67,7 @@ export default function EmergencyCTA() {
               e.currentTarget.style.color = palette.text;
             }}
           >
-            Browse Car Parts
+            Book Tyre Service
           </a>
         </div>
       </div>

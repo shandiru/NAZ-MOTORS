@@ -11,24 +11,24 @@ const WhyServiceTyres = () => {
           {/* Left Column */}
           <div>
             <h2 className="text-4xl font-bold mb-6 leading-snug text-black dark:text-white">
-              Why Choose Naz Motors <br /> for Used Car Parts?
+              Why Choose Naz Motors <br /> for Your Tyre Needs?
             </h2>
             <p className="text-lg mb-8 max-w-2xl text-[#333333] dark:text-[#CCCCCC]">
-              At Naz Motors, we go beyond just selling used car parts — we provide trust, quality, 
-              and a personal service that keeps your vehicle running smoothly. 
-              With a vast inventory and a dedicated team, we make sure you always get the right part, 
-              the first time.
+              At Naz Motors, we provide top-quality tyres, expert fitting, and 
+              professional care to ensure your vehicle performs at its best. 
+              Whether you need new or budget-friendly tyres, our friendly team 
+              ensures safety, value, and satisfaction with every service.
             </p>
 
             {/* Bullet Points */}
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "Extensive range of parts",
-                "Quick nationwide delivery",
-                "Tested & quality assured components",
-                "Friendly and helpful support team",
-                "Affordable prices you can trust",
-                "Fast sourcing for hard-to-find parts",
+                "Wide selection of tyres for all budgets",
+                "Professional wheel alignment",
+                "Eco-friendly tyre disposal",
+                "Expert fitting and balancing",
+                "Competitive prices guaranteed",
+                "Trusted local specialists",
               ].map((text, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <FaCheckCircle className="w-5 h-5 text-[#B62025] dark:text-[#FF4B4B]" />
@@ -53,11 +53,11 @@ const WhyServiceTyres = () => {
               </h3>
               <ul className="space-y-4 text-[#333333] dark:text-[#CCCCCC]">
                 {[
-                  "Family-owned and operated business",
-                  "Decades of experience in the motor trade",
                   "Customer-centred service approach",
                   "Transparent pricing and honest advice",
-                  "Reliable after-sales support and guidance",
+                  "Eco-friendly & sustainable tyre disposal",
+                  "Fast, efficient, and friendly team",
+                  "Reliable service with lasting value",
                 ].map((reason, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="w-2 h-2 mt-2 rounded-full flex-shrink-0 bg-[#B62025] dark:bg-[#FF4B4B]" />
@@ -71,12 +71,12 @@ const WhyServiceTyres = () => {
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
               {[
                 {
-                  title: "Family-Owned Values",
-                  desc: "As a family-run business, we bring honesty, integrity, and personal care to every interaction — you’re part of our community.",
+                  title: "Customer-Centred Approach",
+                  desc: "At Naz Motors, our customers come first. We provide clear communication, honest recommendations, and service you can depend on.",
                 },
                 {
-                  title: "Customer-Centred Approach",
-                  desc: "Our customers are at the heart of everything we do. We take time to understand your needs and deliver tailored solutions you can rely on.",
+                  title: "Eco-Friendly Commitment",
+                  desc: "We care for the environment by using sustainable practices, recycling old tyres, and promoting greener solutions in every service.",
                 },
               ].map((item, i) => (
                 <div
