@@ -13,17 +13,18 @@ export default function MechanicalHero() {
             className="inline-flex items-center justify-center rounded-md px-2 py-0.5 text-xs font-medium mb-4
                        bg-[#B62025]/10 text-[#B62025] dark:bg-[#B62025]/30 dark:text-[#FF4B4B]"
           >
-            Tyre Replacement & Services
+            Mechanical Repairs & Servicing
           </span>
 
           {/* Heading */}
           <h1
             className="text-4xl lg:text-5xl font-black mb-6 text-black dark:text-white"
           >
-            Quality{" "}
+            Reliable{" "}
             <span className="text-[#B62025] dark:text-[#FF4B4B]">
-              Tyres & Wheel Care
-            </span>
+              Mechanical Repairs
+            </span>{" "}
+            for Every Vehicle
           </h1>
 
           {/* Subheading */}
@@ -31,12 +32,12 @@ export default function MechanicalHero() {
             className="text-xl max-w-3xl mx-auto leading-relaxed 
                        text-[#333333] dark:text-[#CCCCCC]"
           >
-            Choose us for your tyre replacement and enjoy top-notch service with
-            unbeatable value! We offer a wide selection of quality new and
-            budget-friendly tyres to help you save on costs without compromising
-            safety. Plus, we’ll take care of disposing of your old tyres
-            responsibly and provide professional wheel alignment for optimal
-            performance and durability.
+            Whatever the problem, our expert technicians are here to solve it.
+            From regular servicing to intricate mechanical repairs, we have the
+            knowledge and experience to handle any challenge. No job is too big
+            or small — we’re committed to providing dependable repairs to keep
+            your car in prime condition. Count on us to get you back behind the
+            wheel with confidence!
           </p>
 
           {/* CTA Buttons */}

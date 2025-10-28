@@ -11,24 +11,25 @@ const MechanicalTyres = () => {
           {/* Left Column */}
           <div>
             <h2 className="text-4xl font-bold mb-6 leading-snug text-black dark:text-white">
-              Why Choose Naz Motors <br /> for Your Tyre Needs?
+              Why Choose Naz Motors <br /> for Mechanical Repairs?
             </h2>
             <p className="text-lg mb-8 max-w-2xl text-[#333333] dark:text-[#CCCCCC]">
-              At Naz Motors, we provide top-quality tyres, expert fitting, and 
-              professional care to ensure your vehicle performs at its best. 
-              Whether you need new or budget-friendly tyres, our friendly team 
-              ensures safety, value, and satisfaction with every service.
+              At Naz Motors, our expert technicians provide dependable, high-quality 
+              mechanical repairs to keep your car performing at its best. 
+              Whether it’s routine maintenance or complex diagnostics, 
+              we’ve got the experience and tools to handle any challenge — 
+              helping you get back behind the wheel with confidence.
             </p>
 
             {/* Bullet Points */}
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "Wide selection of tyres for all budgets",
-                "Professional wheel alignment",
-                "Eco-friendly tyre disposal",
-                "Expert fitting and balancing",
-                "Competitive prices guaranteed",
-                "Trusted local specialists",
+                "Comprehensive vehicle diagnostics",
+                "Brake and clutch repairs",
+                "Engine servicing and maintenance",
+                "Suspension and steering fixes",
+                "Competitive pricing with no hidden costs",
+                "Certified and experienced technicians",
               ].map((text, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <FaCheckCircle className="w-5 h-5 text-[#B62025] dark:text-[#FF4B4B]" />
@@ -53,11 +54,11 @@ const MechanicalTyres = () => {
               </h3>
               <ul className="space-y-4 text-[#333333] dark:text-[#CCCCCC]">
                 {[
-                  "Customer-centred service approach",
-                  "Transparent pricing and honest advice",
-                  "Eco-friendly & sustainable tyre disposal",
-                  "Fast, efficient, and friendly team",
-                  "Reliable service with lasting value",
+                  "Competitive pricing and value",
+                  "Expert repairs for all vehicle types",
+                  "Transparent communication and quotes",
+                  "Friendly, experienced mechanics",
+                  "Reliable service every time",
                 ].map((reason, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="w-2 h-2 mt-2 rounded-full flex-shrink-0 bg-[#B62025] dark:bg-[#FF4B4B]" />
@@ -71,12 +72,12 @@ const MechanicalTyres = () => {
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
               {[
                 {
-                  title: "Customer-Centred Approach",
-                  desc: "At Naz Motors, our customers come first. We provide clear communication, honest recommendations, and service you can depend on.",
+                  title: "Competitive Pricing & Value",
+                  desc: "We deliver high-quality mechanical work at prices that make sense. Expect fair quotes, honest advice, and lasting value for every repair.",
                 },
                 {
-                  title: "Eco-Friendly Commitment",
-                  desc: "We care for the environment by using sustainable practices, recycling old tyres, and promoting greener solutions in every service.",
+                  title: "Specialist Expertise",
+                  desc: "Our technicians are trained in the latest automotive technologies and diagnostic systems, ensuring precision and excellence with every repair.",
                 },
               ].map((item, i) => (
                 <div
