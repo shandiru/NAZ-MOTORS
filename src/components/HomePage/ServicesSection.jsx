@@ -166,7 +166,7 @@ export default function ServicesSection() {
               "Free vehicle collection",
               "Environmentally compliant",
             ]}
-            href="/services/car-scrapping"
+            href="/services/car-scarpping"
           />
 
           <Card

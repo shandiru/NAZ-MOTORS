@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const palette = {
   black: "#000000",
@@ -17,22 +15,6 @@ const palette = {
 };
 
 export default function SiteFooter() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false,
-      mirror: true,
-      easing: "ease-out-cubic",
-    });
-
-    const handleResize = () => AOS.refresh();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <footer
       style={{ backgroundColor: palette.black, color: palette.white }}
@@ -41,7 +23,7 @@ export default function SiteFooter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
-          <div data-aos="fade-up" data-aos-delay="0">
+          <div>
             <h3
               className="text-xl font-bold tracking-wide"
               style={{ color: palette.red }}
@@ -57,7 +39,7 @@ export default function SiteFooter() {
           </div>
 
           {/* Contact Info */}
-          <div data-aos="fade-up" data-aos-delay="150">
+          <div>
             <h4
               className="text-lg font-semibold mb-3"
               style={{ color: palette.red }}
@@ -90,7 +72,7 @@ export default function SiteFooter() {
           </div>
 
           {/* Services List */}
-          <div data-aos="fade-up" data-aos-delay="300">
+          <div>
             <h4
               className="text-lg font-semibold mb-3"
               style={{ color: palette.red }}
@@ -121,7 +103,7 @@ export default function SiteFooter() {
           </div>
 
           {/* Company Links */}
-          <div className="text-sm" data-aos="fade-up" data-aos-delay="450">
+          <div className="text-sm">
             <h4
               className="text-lg font-semibold mb-3"
               style={{ color: palette.red }}
@@ -158,7 +140,7 @@ export default function SiteFooter() {
         />
 
         {/* Bottom note + Powered by */}
-        <div className="pt-6 text-center space-y-2" data-aos="fade-up">
+        <div className="pt-6 text-center space-y-2">
           <p className="text-sm" style={{ color: palette.dim }}>
             © {new Date().getFullYear()} Naz Motors Ltd. All rights reserved.
           </p>

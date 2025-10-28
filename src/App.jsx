@@ -6,7 +6,6 @@ import Footer from "./components/Footer.jsx";
 // Page Components
 import Home from "./Page/Home.jsx";
 import About from "./Page/Contact.jsx";
-import Wheelalignment from "./Page/wheelalignmentpage.jsx";
 import AirConPage from "./Page/AirConPage.jsx";
 import CarServicePage from "./Page/CarServicePage.jsx";
 import CleaningPage from "./Page/CleaningPage.jsx";
@@ -15,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import TermsConditions from "./components/Term.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 import GDPRBanner from "../src/components/GDPRBanner.jsx"
+import CarScarpping from "./Page/CarScarpping.jsx";
 
 export default function App() {
   return (
@@ -25,9 +25,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<About />} />
-          <Route path="/services/wheel-alignment" element={<Wheelalignment />} />
-          <Route path="/services/air-con" element={<AirConPage />} />
+          <Route path="/services/car-scarpping" element={<CarScarpping />} />
           <Route path="/services/mot" element={<CarServicePage />} />
+          <Route path="/services/air-con" element={<AirConPage />} />
           <Route path="/services/cleaning" element={<CleaningPage />} />
           <Route path="/services/diagnostics" element={<DiagnosticsPage />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
