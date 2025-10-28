@@ -110,10 +110,10 @@ const PrivacyPolicy = () => {
                         If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:
                     </p>
                     <div className="text-white">
-                        <p><strong>STONELEY'S GARAGE SERVICES</strong></p>
+                        <p><strong>NAZ MOTORS LTD</strong></p>
                         {/* <p>Email: <a href="mailto:smashedashby@gmail.com" className="text-[#27AE60] hover:underline">smashedashby@gmail.com</a></p> */}
                         <p>Phone: 0116 251 5961</p>
-                        <p>Address: Stoneley&apos;s Garage, Hamilton Way, Mansfield NG18 5BU, UK</p>
+                        <p>Address:  80 Ravensbridge Drive, Leicester, LE4 0BX, UK</p>
                     </div>
                     <p className="mt-2 text-white">
                         If you are not satisfied with our response, you have the right to lodge a complaint with the{' '}
@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
                             href="https://ico.org.uk/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[#27AE60] hover:underline"
+                            className="text-[#B62025] hover:underline"
                         >
                             Information Commissioner’s Office (ICO)
                         </a>.

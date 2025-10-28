@@ -81,13 +81,13 @@ export default function SiteFooter() {
             </h4>
             <ul className="space-y-2 text-sm">
               {[
-                ["All Second-Hand Car Parts", "/services/used-parts"],
-                ["Car Scrapping", "/services/car-scrapping"],
                 ["MOT Testing", "/services/mot"],
-                ["Vehicle Servicing", "/services/service"],
-                ["Mechanical Repairs", "/services/mechanical"],
-                ["Tyres & Wheel Alignment", "/services/tyres"],
-                ["Aircon Re-gas & Service", "/services/aircon"],
+                ["Car Scrapping", "/services/car-scrapping"],
+                ["Service", "/services/service"],
+                ["Mechanical Repairs (All)", "/services/mechanical-repairs"],
+                ["Tyres", "/services/tyres"],
+                ["All Second-Hand Car Parts", "/services/all-second-hand-car-parts"],
+                ["Aircon Re-gas & Service", "/services/aircon-re-gas-service"],
               ].map(([label, href], i) => (
                 <li key={i}>
                   <a

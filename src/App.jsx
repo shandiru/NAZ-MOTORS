@@ -18,6 +18,7 @@ import CarScarpping from "./Page/CarScarpping.jsx";
 import AllSecondHandCarParts from "./Page/AllSecondHandCarParts.jsx"
 import Service from "./Page/Service.jsx";
 import MechanicalPage from "./Page/MechanicalPage.jsx"
+import Tyres from "./Page/Tyres.jsx";
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -31,11 +32,10 @@ export default function App() {
           <Route path="/services/mot" element={<CarServicePage />} />
           <Route path="/services/aircon-re-gas-service" element={<AirConPage />} />
           <Route path="/services/service" element={<Service />} />
-          <Route path="/services/cleaning" element={<CleaningPage />} />
-          <Route path="/services/diagnostics" element={<DiagnosticsPage />} />
+          <Route path="/services/tyres" element={<Tyres />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/services/second-hand-parts" element={<AllSecondHandCarParts />} />
+          <Route path="/services/all-second-hand-car-parts" element={<AllSecondHandCarParts />} />
            <Route path="/services/mechanical-repairs" element={<MechanicalPage />} />
         </Routes>
       </main>
