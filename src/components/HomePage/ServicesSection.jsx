@@ -24,7 +24,7 @@ const Card = ({ icon, title, desc, bullets = [], href = "#" }) => (
       bg-[var(--brand-bg)]
       text-[var(--brand-text)]
       shadow-sm transition-all duration-300
-      hover:shadow-lg hover:border-[var(--brand-accent)]
+     hover:border-[var(--brand-accent)]
       hover:ring-2 hover:ring-[var(--brand-accent)]
       hover:ring-offset-2 hover:ring-offset-[var(--brand-bgSoft)]
       hover:shadow-[var(--shadow-accent)]
@@ -166,7 +166,7 @@ export default function ServicesSection() {
               "Free vehicle collection",
               "Environmentally compliant",
             ]}
-            href="/services/car-scarpping"
+            href="/services/car-scrapping"
           />
 
           <Card
@@ -231,7 +231,7 @@ export default function ServicesSection() {
               "Friendly sales team",
               "Family-owned & customer-first",
             ]}
-            href="/services/second-hand-parts"
+            href="/services/all-second-hand-car-parts"
           />
 
           <Card
@@ -244,7 +244,7 @@ export default function ServicesSection() {
               "System diagnostics",
               "Quick turnaround",
             ]}
-            href="/services/aircon"
+            href="/services/aircon-re-gas-service"
           />
         </div>
       </div>
