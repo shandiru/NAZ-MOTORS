@@ -20,13 +20,15 @@ export default function EmergencyCTA() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
         <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white dark:text-white">
-          Book Your Service or MOT Today
+          Hassle-Free Car Scrapping Services
         </h2>
 
         {/* Subheading */}
         <p className="text-xl mb-8 opacity-90 text-white dark:text-gray-100">
-          Professional automotive services from qualified technicians with over
-          50 years of experience.
+          We make car scrapping simple and responsible. As an Authorised Treatment 
+          Facility (ATF), Naz Motors ensures your old or unwanted vehicle is recycled 
+          safely and in compliance with environmental standards. Enjoy free collection 
+          and peace of mind with every disposal.
         </p>
 
         {/* CTA Buttons */}
@@ -53,7 +55,7 @@ export default function EmergencyCTA() {
             </button>
           </a>
 
-          {/* Book MOT Button */}
+          {/* Book Collection Button */}
           <a href="/contact" className="inline-block">
             <button
               className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold border transition-all duration-200 hover:scale-105"
@@ -74,7 +76,7 @@ export default function EmergencyCTA() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              Book MOT Test
+              Book Free Collection
             </button>
           </a>
         </div>

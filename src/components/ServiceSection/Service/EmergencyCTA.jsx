@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { FaPhone } from "react-icons/fa";
 
@@ -20,13 +19,15 @@ export default function EmergencyCTA() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
         <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white dark:text-white">
-          Book Your Service or MOT Today
+          Keep Your Car Running Smoothly — Book a Service Today
         </h2>
 
         {/* Subheading */}
         <p className="text-xl mb-8 opacity-90 text-white dark:text-gray-100">
-          Professional automotive services from qualified technicians with over
-          50 years of experience.
+          At Naz Motors, we do more than just routine maintenance. 
+          Our skilled technicians use premium parts and advanced tools to 
+          ensure your car performs at its best. Count on us for expert, 
+          personalised service tailored to your vehicle’s needs.
         </p>
 
         {/* CTA Buttons */}
@@ -53,7 +54,7 @@ export default function EmergencyCTA() {
             </button>
           </a>
 
-          {/* Book MOT Button */}
+          {/* Book Service Button */}
           <a href="/contact" className="inline-block">
             <button
               className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold border transition-all duration-200 hover:scale-105"
@@ -74,7 +75,7 @@ export default function EmergencyCTA() {
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
-              Book MOT Test
+              Book Car Service
             </button>
           </a>
         </div>
