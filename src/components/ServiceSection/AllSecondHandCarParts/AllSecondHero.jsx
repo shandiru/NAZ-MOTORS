@@ -13,16 +13,16 @@ export default function AllSecondHero() {
             className="inline-flex items-center justify-center rounded-md px-2 py-0.5 text-xs font-medium mb-4
                        bg-[#B62025]/10 text-[#B62025] dark:bg-[#B62025]/30 dark:text-[#FF4B4B]"
           >
-            Climate Control Experts
+            Quality Used Car Parts
           </span>
 
           {/* Heading */}
           <h1
             className="text-4xl lg:text-5xl font-black mb-6 text-black dark:text-white"
           >
-            Air Conditioning{" "}
+            All{" "}
             <span className="text-[#B62025] dark:text-[#FF4B4B]">
-              Re-Gas &amp; Service
+              Second Hand Car Parts
             </span>
           </h1>
 
@@ -31,9 +31,7 @@ export default function AllSecondHero() {
             className="text-xl max-w-3xl mx-auto leading-relaxed 
                        text-[#333333] dark:text-[#CCCCCC]"
           >
-            Professional air conditioning services to keep your vehicle
-            comfortable year-round. Expert re-gas, diagnostics, and repair
-            services from qualified technicians.
+            Looking for quality used car parts? We’ve got you covered! With a vast range of parts in stock across multiple warehouses in Leicestershire, we’re confident we have what you need. On the rare chance we don’t, we’ll source it for you quickly. Enjoy next-day delivery or collect your parts at your convenience.
           </p>
 
           {/* CTA Buttons */}
@@ -45,7 +43,7 @@ export default function AllSecondHero() {
                            bg-[#B62025] text-white hover:bg-[#7C1419] dark:bg-[#B62025] dark:hover:bg-[#7C1419]"
               >
                 <FaPhoneAlt className="h-5 w-5" />
-                Book Service: 01162515961
+                Call Now: 01162515961
               </button>
             </a>
 

@@ -17,11 +17,12 @@ export default function EmergencyCTA() {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          Keep Cool with Professional Air-Con Service
+          Find the Right Used Car Part — Fast & Reliable
         </h2>
 
         <p className="text-xl mb-8 opacity-90">
-          Expert air conditioning services from qualified technicians using professional equipment
+          Contact our friendly sales team today to find the perfect part for your vehicle. 
+          We stock thousands of quality used car parts ready for next-day delivery or collection!
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -45,7 +46,7 @@ export default function EmergencyCTA() {
             </button>
           </a>
 
-          {/* Book Air-Con Button */}
+          {/* Browse Parts Button */}
           <a
             href="/contact"
             className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold border transition-all duration-300"
@@ -62,7 +63,7 @@ export default function EmergencyCTA() {
               e.currentTarget.style.color = palette.text;
             }}
           >
-            Book Air-Con Service
+            Browse Car Parts
           </a>
         </div>
       </div>

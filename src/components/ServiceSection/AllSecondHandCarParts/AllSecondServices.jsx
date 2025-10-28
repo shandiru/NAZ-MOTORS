@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  FaSnowflake,
-  FaThermometerHalf,
-  FaTools,
+  FaCogs,
+  FaTruckLoading,
+  FaSearch,
   FaShieldAlt,
   FaRegCheckCircle,
 } from "react-icons/fa";
@@ -11,52 +11,49 @@ import {
 export default function AllSecondServices() {
   const services = [
     {
-      title: "Air-Con Re-Gas Service",
-      desc: "Professional refrigerant replacement to restore cooling performance",
+      title: "Extensive Parts Inventory",
+      desc: "Thousands of quality used car parts available for all makes and models.",
+      icon: <FaCogs className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      points: [
+        "Engines, gearboxes, and brakes",
+        "Body panels and bumpers",
+        "Interior and exterior trims",
+        "Electrical components",
+      ],
+    },
+    {
+      title: "Fast Nationwide Delivery",
+      desc: "Get your parts quickly and efficiently — wherever you are in the UK.",
       icon: (
-        <FaSnowflake className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />
+        <FaTruckLoading className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />
       ),
       points: [
-        "Complete system evacuation",
-        "Fresh refrigerant refill",
-        "Leak detection check",
-        "Sanatisation cleaning",
+        "Next-day delivery available",
+        "Tracked courier service",
+        "Collection available in-house",
+        "Safe packaging for fragile items",
       ],
     },
     {
-      title: "System Diagnostics",
-      desc: "Comprehensive air conditioning system health check and diagnosis",
-      icon: (
-        <FaThermometerHalf className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />
-      ),
+      title: "Parts Sourcing Assistance",
+      desc: "Can’t find what you need? Our team will source it for you fast.",
+      icon: <FaSearch className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Temperature testing",
-        "Pressure analysis",
-        "Component inspection",
-        "Fault code reading",
-        "Nitrogen leak down test",
+        "Dedicated sourcing experts",
+        "Access to nationwide stock network",
+        "Quick turnaround time",
+        "Quality guarantee on every find",
       ],
     },
     {
-      title: "Component Repair",
-      desc: "Professional repair and replacement of air conditioning components",
-      icon: <FaTools className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
-      points: [
-        "Compressor service",
-        "Condenser repair",
-        "Evaporator maintenance",
-        "Pipe replacement",
-      ],
-    },
-    {
-      title: "Preventive Maintenance",
-      desc: "Regular maintenance to prevent costly air conditioning failures",
+      title: "Quality & Warranty Assurance",
+      desc: "Every part is inspected and tested to meet strict quality standards.",
       icon: <FaShieldAlt className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Filter replacement",
-        "System cleaning",
-        "Leak prevention",
-        "Annual service",
+        "Thorough quality checks",
+        "Reliable and tested components",
+        "Warranty on selected items",
+        "Buy with confidence every time",
       ],
     },
   ];
@@ -67,11 +64,10 @@ export default function AllSecondServices() {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black dark:text-white">
-            Professional Air Conditioning Services
+            Quality Second Hand Car Parts & Services
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-[#333333] dark:text-[#CCCCCC]">
-            Comprehensive air conditioning solutions for optimal cabin comfort and
-            system performance.
+            Explore our range of used parts and services — quality, affordability, and reliability all under one roof.
           </p>
         </div>
 
