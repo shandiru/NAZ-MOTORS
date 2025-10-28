@@ -8,7 +8,7 @@ import {
   FaRegCheckCircle,
 } from "react-icons/fa";
 
-export default function TyresServices() {
+export default function MechanicalServices() {
   const services = [
     {
       title: "Wide Tyre Selection",

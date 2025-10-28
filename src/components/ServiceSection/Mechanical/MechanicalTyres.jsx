@@ -3,7 +3,7 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-const WhyServiceTyres = () => {
+const MechanicalTyres = () => {
   return (
     <section className="py-16 transition-colors duration-300 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,4 +102,4 @@ const WhyServiceTyres = () => {
   );
 };
 
-export default WhyServiceTyres;
+export default MechanicalTyres;
