@@ -29,11 +29,13 @@ export default function GarageNav() {
 
   const ServiceLinks = ({ itemClass = "block px-4 py-2 text-sm text-center" }) => (
     <>
-      <a href="/services/wheel-alignment" className={`${itemClass} hover:bg-green-700/80`}>Wheel Alignment &amp; Tyres</a>
-      <a href="/services/air-con" className={`${itemClass} hover:bg-green-700/80`}>Air Conditioning</a>
-      <a href="/services/car-service" className={`${itemClass} hover:bg-green-700/80`}>Car Service &amp; MOT</a>
-      <a href="/services/cleaning" className={`${itemClass} hover:bg-green-700/80`}>Engine Cleaning</a>
-      <a href="/services/diagnostics" className={`${itemClass} hover:bg-green-700/80`}>Diagnostics</a>
+      <a href="/services/mot" className={`${itemClass} hover:bg-[#C8102E]`}>MOT</a>
+      <a href="/services/car-scrapping" className={`${itemClass} hover:bg-[#C8102E]`}>Car Scrapping</a>
+      <a href="/services/service" className={`${itemClass} hover:bg-[#C8102E]`}>Service</a>
+      <a href="/services/mechanical-repairs" className={`${itemClass} hover:bg-[#C8102E]`}>Mechanical Repairs (All)</a>
+      <a href="/services/tyres" className={`${itemClass} hover:bg-[#C8102E]`}>Tyres</a>
+      <a href="/services/all-second-hand-car-parts" className={`${itemClass} hover:bg-[#C8102E]`}>All Second Hand Car Parts</a>
+      <a href="/services/aircon-re-gas-service" className={`${itemClass} hover:bg-[#C8102E]`}>Aircon re-gas/service</a>
     </>
   );
 
@@ -104,8 +106,8 @@ export default function GarageNav() {
             >
               <FaMapMarkerAlt className="h-4 w-4" />
               <span>80 Ravensbridge Drive
-Leicester
-LE4 0BX</span>
+                Leicester
+                LE4 0BX</span>
             </a>
             <ThemeToggle />
           </div>
@@ -146,7 +148,7 @@ LE4 0BX</span>
             style={{ maxHeight: svcOpenMobile ? "280px" : "0px" }}
           >
             <div className="flex flex-col py-1 text-white/95 items-center">
-              <ServiceLinks itemClass="py-2 px-3 text-sm hover:bg-green-700/80 rounded text-center w-full" />
+              <ServiceLinks itemClass="py-2 px-3 text-sm hover:bg-[#C8102E] rounded text-center w-full" />
             </div>
           </div>
 
@@ -163,7 +165,7 @@ LE4 0BX</span>
               className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 px-3 py-2 rounded-md transition-colors"
             >
               <FaMapMarkerAlt className="h-4 w-4" />
-              <span>Stoneley&apos;s Garage, NG18 5BU</span>
+              <span>80 Ravensbridge Drive Leicester, LE4 0BX</span>
             </a>
             <div className="pt-1 flex justify-center">
               <ThemeToggle />
