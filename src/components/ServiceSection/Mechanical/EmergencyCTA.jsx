@@ -18,14 +18,14 @@ export default function EmergencyCTA() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          Top-Quality Tyres with Unbeatable Value
+          Reliable Mechanical Repairs You Can Trust
         </h2>
 
         {/* Subheading */}
         <p className="text-xl mb-8 opacity-90">
-          Contact our friendly team today for professional tyre replacement,
-          balancing, and alignment. We offer premium and budget tyres to suit
-          every vehicle and every budget — without compromising on safety.
+          From routine maintenance to complex mechanical issues, our skilled 
+          technicians have the expertise to handle it all. Contact our friendly 
+          team today and get your vehicle back on the road safely and efficiently.
         </p>
 
         {/* CTA Buttons */}
@@ -50,7 +50,7 @@ export default function EmergencyCTA() {
             </button>
           </a>
 
-          {/* Book Tyre Service Button */}
+          {/* Book Repair Button */}
           <a
             href="/contact"
             className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold border transition-all duration-300"
@@ -67,7 +67,7 @@ export default function EmergencyCTA() {
               e.currentTarget.style.color = palette.text;
             }}
           >
-            Book Tyre Service
+            Book Repair Service
           </a>
         </div>
       </div>

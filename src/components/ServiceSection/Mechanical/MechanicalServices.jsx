@@ -1,57 +1,57 @@
 "use client";
 
 import {
-  FaCarSide,
-  FaRecycle,
-  FaCog,
-  FaBalanceScale,
+  FaTools,
+  FaCogs,
+  FaWrench,
+  FaClipboardCheck,
   FaRegCheckCircle,
 } from "react-icons/fa";
 
 export default function MechanicalServices() {
   const services = [
     {
-      title: "Wide Tyre Selection",
-      desc: "Choose from a wide range of quality new and budget-friendly tyres to suit all vehicles and budgets.",
-      icon: <FaCarSide className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      title: "Comprehensive Mechanical Repairs",
+      desc: "From routine maintenance to complex mechanical work, we handle it all with precision and care.",
+      icon: <FaTools className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Premium and budget options available",
-        "Tyres for all car makes and models",
-        "Winter, summer, and all-season tyres",
-        "Expert fitting and balancing service",
+        "Engine repairs and replacements",
+        "Brake and clutch servicing",
+        "Steering and suspension systems",
+        "Transmission and gearbox repairs",
       ],
     },
     {
-      title: "Professional Wheel Alignment",
-      desc: "Ensure maximum performance, handling, and tyre longevity with precision wheel alignment.",
-      icon: <FaCog className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      title: "Advanced Diagnostics & Fault Finding",
+      desc: "Our experts use the latest diagnostic tools to identify and fix issues quickly and efficiently.",
+      icon: <FaCogs className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Computerised alignment technology",
-        "Improved fuel efficiency",
-        "Even tyre wear",
-        "Smoother, safer driving experience",
+        "Computerised diagnostics",
+        "Engine management testing",
+        "Electronic fault analysis",
+        "Preventive maintenance checks",
       ],
     },
     {
-      title: "Eco-Friendly Tyre Disposal",
-      desc: "We dispose of your old tyres responsibly, ensuring minimal environmental impact.",
-      icon: <FaRecycle className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      title: "Specialist Expertise",
+      desc: "Our skilled team is trained in the latest automotive technologies for both modern and classic vehicles.",
+      icon: <FaWrench className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Environmentally friendly recycling",
-        "Sustainable disposal methods",
-        "Zero waste to landfill",
-        "Certified eco practices",
+        "Hybrid and electric vehicle repairs",
+        "Certified diagnostic specialists",
+        "Complex repair solutions",
+        "Precision workmanship",
       ],
     },
     {
-      title: "Unbeatable Value & Safety",
-      desc: "Save on costs without compromising safety with our unbeatable tyre services.",
-      icon: <FaBalanceScale className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
+      title: "Competitive Pricing & Value",
+      desc: "Get affordable, reliable car care without compromising on service quality or performance.",
+      icon: <FaClipboardCheck className="h-5 w-5 text-[#B62025] dark:text-[#FF4B4B]" />,
       points: [
-        "Affordable prices with no hidden fees",
-        "Trusted brands and expert advice",
-        "Guaranteed quality and durability",
-        "Safety-first fitting every time",
+        "Transparent quotes – no hidden fees",
+        "High-quality parts at fair prices",
+        "Excellent value for long-term reliability",
+        "Customer satisfaction guaranteed",
       ],
     },
   ];
@@ -62,11 +62,12 @@ export default function MechanicalServices() {
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-black dark:text-white">
-            Professional Tyre Replacement & Services
+            Expert Mechanical Repairs & Diagnostics
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-[#333333] dark:text-[#CCCCCC]">
-            Top-quality tyres, professional alignment, and eco-friendly disposal — 
-            all handled with care, value, and expertise by Naz Motors.
+            Whatever the problem, Naz Motors has the knowledge and experience to
+            handle it. From advanced diagnostics to detailed repairs, we’re your
+            trusted specialists for reliable, professional automotive service.
           </p>
         </div>
 
