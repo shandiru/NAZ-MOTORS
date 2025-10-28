@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/contact" element={<About />} />
           <Route path="/services/car-scrapping" element={<CarScarpping />} />
           <Route path="/services/mot" element={<CarServicePage />} />
-          <Route path="/services/air-con" element={<AirConPage />} />
+          <Route path="/services/aircon-re-gas-service" element={<AirConPage />} />
           <Route path="/services/service" element={<Service />} />
           <Route path="/services/cleaning" element={<CleaningPage />} />
           <Route path="/services/diagnostics" element={<DiagnosticsPage />} />
