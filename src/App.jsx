@@ -16,6 +16,8 @@ import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 import GDPRBanner from "../src/components/GDPRBanner.jsx"
 import CarScarpping from "./Page/CarScarpping.jsx";
 import AllSecondHandCarParts from "./Page/AllSecondHandCarParts.jsx"
+import Service from "./Page/Service.jsx";
+
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,14 +27,15 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<About />} />
-          <Route path="/services/car-scarpping" element={<CarScarpping />} />
+          <Route path="/services/car-scrapping" element={<CarScarpping />} />
           <Route path="/services/mot" element={<CarServicePage />} />
           <Route path="/services/air-con" element={<AirConPage />} />
+          <Route path="/services/service" element={<Service />} />
           <Route path="/services/cleaning" element={<CleaningPage />} />
           <Route path="/services/diagnostics" element={<DiagnosticsPage />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-           <Route path="/services/second-hand-parts" element={<AllSecondHandCarParts />} />
+          <Route path="/services/second-hand-parts" element={<AllSecondHandCarParts />} />
         </Routes>
       </main>
       <Footer />

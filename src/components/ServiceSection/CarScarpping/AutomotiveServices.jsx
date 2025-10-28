@@ -46,6 +46,9 @@ export default function ATFSection() {
         </div>
 
         {/* Grid */}
+            <h2 className="text-3xl lg:text-4xl text-center mb-7 font-bold text-[#C8102E]">
+            WhyNaz Motor's
+          </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {highlights.map((item, i) => (
             <div
