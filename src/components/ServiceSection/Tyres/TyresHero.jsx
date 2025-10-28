@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 
-export default function AllSecondHero() {
+export default function TyresServices() {
   return (
     <section
       className="py-16 transition-colors duration-300 bg-white dark:bg-black"
