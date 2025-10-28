@@ -1,22 +1,21 @@
-// File: EmergencyCTA.jsx
+"use client";
 import React from "react";
 import { FaPhone } from "react-icons/fa";
 
 const palette = {
-  primary: "#3F8D3A",          // Green background
-  fgOnPrimary: "#FFFFFF",      // White text
-  secondaryBg: "#B9C26D",      // Olive button
-  secondaryText: "#1F2A10",    // Dark text on olive
-  outline: "#FFFFFF",          // White outline
+  primary: "#B62025",   // Naz Motors Red
+  hover: "#7C1419",     // Darker hover red
+  text: "#FFFFFF",      // White text
+  outline: "#FFFFFF",   // White border for secondary button
 };
 
 export default function EmergencyCTA() {
   return (
     <section
-      className="py-16"
-      style={{ backgroundColor: palette.primary, color: palette.fgOnPrimary }}
+      className="py-16 text-center transition-colors duration-300"
+      style={{ backgroundColor: palette.primary, color: palette.text }}
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
           Keep Cool with Professional Air-Con Service
         </h2>
@@ -29,33 +28,38 @@ export default function EmergencyCTA() {
           {/* Call Button */}
           <a href="tel:01162515961" className="inline-block">
             <button
-              className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold"
+              className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-all shadow-md hover:scale-105"
               style={{
-                backgroundColor: palette.secondaryBg,
-                color: palette.secondaryText,
+                backgroundColor: "#FFFFFF",
+                color: palette.primary,
               }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = palette.hover)
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = "#FFFFFF")
+              }
             >
               <FaPhone className="h-5 w-5" />
-              Call +44 1623 623 759
+              Call 01162515961
             </button>
           </a>
 
           {/* Book Air-Con Button */}
           <a
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold transition-colors"
+            className="inline-flex items-center justify-center gap-2 h-10 rounded-md px-6 font-semibold border transition-all duration-300"
             style={{
-              backgroundColor: "transparent",
-              color: palette.fgOnPrimary,
-              border: `1px solid ${palette.outline}`,
+              borderColor: palette.outline,
+              color: palette.text,
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = palette.fgOnPrimary;
+              e.currentTarget.style.backgroundColor = "#FFFFFF";
               e.currentTarget.style.color = palette.primary;
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.color = palette.fgOnPrimary;
+              e.currentTarget.style.color = palette.text;
             }}
           >
             Book Air-Con Service

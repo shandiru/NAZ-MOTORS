@@ -28,10 +28,10 @@ export default function EmergencyCTA() {
 
           {/* Call Button */}
           <a
-            href="tel:+44 1623 623 759"
+            href="tel:01162515961"
             className="border border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#4C9A45] transition"
           >
-            Call +44 1623 623 759
+            Call 01162515961
           </a>
         </div>
       </div>

@@ -5,20 +5,18 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const WhyServiceAirConditioning = () => {
   return (
-    <section
-      className="py-16 transition-colors duration-300"
-      style={{ backgroundColor: "var(--aircon-section-bg)" }}
-    >
+    <section className="py-16 transition-colors duration-300 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
           <div>
-            <h2 className="text-4xl font-bold mb-6 leading-snug text-[color:var(--aircon-heading)]">
+            <h2 className="text-4xl font-bold mb-6 leading-snug text-black dark:text-white">
               Why Service Your Air <br /> Conditioning?
             </h2>
-            <p className="text-lg mb-8 max-w-2xl text-[color:var(--aircon-muted)]">
-              Regular air conditioning maintenance ensures optimal performance, prevents costly repairs,
-              and maintains healthy air quality in your vehicle cabin.
+            <p className="text-lg mb-8 max-w-2xl text-[#333333] dark:text-[#CCCCCC]">
+              Regular air conditioning maintenance ensures optimal performance,
+              prevents costly repairs, and maintains healthy air quality in your
+              vehicle cabin.
             </p>
 
             {/* Bullet Points */}
@@ -32,8 +30,10 @@ const WhyServiceAirConditioning = () => {
                 "Year-round comfort",
               ].map((text, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <FaCheckCircle className="w-5 h-5 text-[color:var(--aircon-check-icon)]" />
-                  <span className="text-[color:var(--aircon-heading)]">{text}</span>
+                  <FaCheckCircle className="w-5 h-5 text-[#B62025] dark:text-[#FF4B4B]" />
+                  <span className="text-black dark:text-[#EEEEEE] font-medium">
+                    {text}
+                  </span>
                 </div>
               ))}
             </div>
@@ -43,16 +43,14 @@ const WhyServiceAirConditioning = () => {
           <div>
             {/* Signs Box */}
             <div
-              className="rounded-xl p-8 shadow-sm transition-colors duration-300"
-              style={{
-                backgroundColor: "var(--aircon-card-bg)",
-                border: "1px solid var(--aircon-card-border)",
-              }}
+              className="rounded-xl p-8 shadow-sm transition-all duration-300
+                         bg-[#F8F8F8] dark:bg-[#111111]
+                         border border-[#E5E5E5] dark:border-[#222222]"
             >
-              <h3 className="text-2xl font-bold mb-4 text-[color:var(--aircon-heading)]">
+              <h3 className="text-2xl font-bold mb-4 text-black dark:text-white">
                 Signs You Need Air-Con Service
               </h3>
-              <ul className="space-y-4 text-[color:var(--aircon-muted)]">
+              <ul className="space-y-4 text-[#333333] dark:text-[#CCCCCC]">
                 {[
                   "Weak or warm air from vents",
                   "Unusual odours when AC is running",
@@ -61,14 +59,14 @@ const WhyServiceAirConditioning = () => {
                   "System hasn't been serviced in 2+ years",
                 ].map((sign, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="w-2 h-2 mt-2 rounded-full flex-shrink-0 bg-[color:var(--aircon-check-icon)]" />
+                    <div className="w-2 h-2 mt-2 rounded-full flex-shrink-0 bg-[#B62025] dark:bg-[#FF4B4B]" />
                     <span>{sign}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* GAS TYPES */}
+            {/* Gas Types */}
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
               {[
                 {
@@ -82,16 +80,14 @@ const WhyServiceAirConditioning = () => {
               ].map((gas, i) => (
                 <div
                   key={i}
-                  className="rounded-lg p-5 shadow-sm transition-colors duration-300"
-                  style={{
-                    backgroundColor: "var(--aircon-card-bg)",
-                    border: "1px solid var(--aircon-card-border)",
-                  }}
+                  className="rounded-lg p-5 shadow-sm transition-all duration-300
+                             bg-[#F8F8F8] dark:bg-[#111111]
+                             border border-[#E5E5E5] dark:border-[#222222]"
                 >
-                  <h4 className="text-lg font-bold mb-2 text-[color:var(--aircon-heading)]">
+                  <h4 className="text-lg font-bold mb-2 text-black dark:text-white">
                     {gas.title}
                   </h4>
-                  <p className="text-sm leading-relaxed text-[color:var(--aircon-muted)]">
+                  <p className="text-sm leading-relaxed text-[#333333] dark:text-[#CCCCCC]">
                     {gas.desc}
                   </p>
                 </div>
