@@ -1,27 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Camera, Settings, Info, Heart, Share2 } from 'lucide-react';
 
-const VehicleDetailsPage = () => {
+const VehicleDetailsPage = ({ vehicle }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showEnquiryModal, setShowEnquiryModal] = useState(false);
   const [showReserveModal, setShowReserveModal] = useState(false);
-
-  const vehicle = {
-    make: 'Renault',
-    model: 'Clio',
-    variant: 'Play',
-    price: 6795,
-    monthlyPayment: 128.24,
-    year: 2017,
-    registration: '17 reg',
-    mileage: 38202,
-    fuelType: 'Petrol',
-    transmission: 'Manual',
-    bodyType: 'Hatchback',
-    engine: '1.1L',
-    colour: 'Glacier White',
-    images: Array(8).fill('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop')
-  };
 
   const details = [
     { label: 'ULEZ Compliant', value: 'ULEZ Compliant' },
@@ -34,13 +17,8 @@ const VehicleDetailsPage = () => {
     { label: 'Colour', value: vehicle.colour }
   ];
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % vehicle.images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + vehicle.images.length) % vehicle.images.length);
-  };
+  const nextImage = () => setCurrentImageIndex((prev) => (prev + 1) % vehicle.images.length);
+  const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + vehicle.images.length) % vehicle.images.length);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -49,15 +27,12 @@ const VehicleDetailsPage = () => {
           {/* Left Column - Images */}
           <div className="lg:col-span-7 xl:col-span-8">
             <div className="sticky top-4">
-              {/* Main Image Gallery */}
               <div className="relative rounded-2xl overflow-hidden bg-black/20 backdrop-blur">
                 <img
                   src={vehicle.images[currentImageIndex]}
                   alt={`${vehicle.make} ${vehicle.model}`}
                   className="w-full h-64 sm:h-96 md:h-[500px] object-cover"
                 />
-                
-                {/* Navigation Buttons */}
                 <button
                   onClick={prevImage}
                   className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-full transition"
@@ -70,13 +45,9 @@ const VehicleDetailsPage = () => {
                 >
                   <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
-
-                {/* Image Counter */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur px-4 py-2 rounded-full text-sm font-semibold">
                   {currentImageIndex + 1} / {vehicle.images.length}
                 </div>
-
-                {/* Action Buttons */}
                 <div className="absolute top-4 right-4 flex gap-2">
                   <button className="bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 rounded-full transition">
                     <Heart className="w-5 h-5" />
@@ -133,7 +104,6 @@ const VehicleDetailsPage = () => {
 
               {/* Pricing Cards */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                {/* Finance Option */}
                 <div className="bg-[#C8102E] rounded-2xl p-6 text-center">
                   <div className="text-sm opacity-75 mb-2">Finance this Car from</div>
                   <div className="text-4xl font-bold mb-3">£{vehicle.monthlyPayment}</div>
@@ -141,8 +111,6 @@ const VehicleDetailsPage = () => {
                     Apply Now
                   </button>
                 </div>
-
-                {/* Buy Option */}
                 <div className="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl p-6 text-center">
                   <div className="text-sm opacity-75 mb-2">Buy this Car</div>
                   <div className="text-4xl font-bold mb-3">£{vehicle.price.toLocaleString()}</div>
@@ -202,7 +170,7 @@ const VehicleDetailsPage = () => {
         </div>
       </div>
 
-      {/* Simple Modals */}
+      {/* Modals */}
       {showEnquiryModal && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50" onClick={() => setShowEnquiryModal(false)}>
           <div className="bg-slate-800 rounded-2xl p-6 max-w-md w-full" onClick={(e) => e.stopPropagation()}>

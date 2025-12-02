@@ -44,3 +44,21 @@ export const vehicleDetails = {
 
   videoUrl: "https://www.youtube-nocookie.com/embed/s8KoeQEGv8o",
 };
+
+// vehicleDetailsData.js
+export const vehicleData = {
+  make: 'Renault',
+  model: 'Clio',
+  variant: 'Play',
+  price: 6795,
+  monthlyPayment: 128.24,
+  year: 2017,
+  registration: '17 reg',
+  mileage: 38202,
+  fuelType: 'Petrol',
+  transmission: 'Manual',
+  bodyType: 'Hatchback',
+  engine: '1.1L',
+  colour: 'Glacier White',
+  images: Array(8).fill('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop')
+};
