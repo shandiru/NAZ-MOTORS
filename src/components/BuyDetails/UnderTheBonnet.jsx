@@ -14,35 +14,38 @@ export default function UnderTheBonnet() {
 
   return (
     <div className="w-full px-4 py-12">
+      
       {/* Heading */}
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-10 text-white">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-10 text-[#FCFCFC]">
         Under the Bonnet
       </h2>
 
-      {/* DARK BOX ONLY HERE */}
-      <div className="bg-[#1a1a1a] rounded-2xl py-10 px-4">
+      {/* DARK BOX */}
+      <div className="bg-[#020000] rounded-2xl py-10 px-4 shadow-lg shadow-[#3F2E31]">
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          
           {items.map((item, index) => (
             <div
               key={index}
-              className="bg-[#FFCF00] rounded-xl p-5 text-center flex flex-col items-center justify-center shadow-md"
+              className="bg-[#B40B1F] rounded-xl p-5 text-center flex flex-col items-center justify-center shadow-md shadow-[#3F2E31]"
             >
               <img src={item.icon} className="w-10 h-10 my-3" />
 
-              <span className="text-black/70 text-sm">{item.title}</span>
+              <span className="text-[#A7A1A2] text-sm">{item.title}</span>
 
-              <strong className="text-black text-xl font-bold mt-1">
+              <strong className="text-[#FCFCFC] text-xl font-bold mt-1">
                 {item.value}
               </strong>
             </div>
           ))}
+
         </div>
 
-        {/* View Technical Data */}
+        {/* View full technical data */}
         <div className="text-center mt-8">
           <a
             href="#"
-            className="text-white font-semibold underline underline-offset-4 opacity-80 hover:opacity-100 transition"
+            className="text-[#FCFCFC] font-semibold underline underline-offset-4 opacity-80 hover:opacity-100 transition"
           >
             View full technical data
           </a>
