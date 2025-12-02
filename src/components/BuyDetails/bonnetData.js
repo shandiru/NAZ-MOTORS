@@ -25,3 +25,22 @@ export const galleryImages = [
   "https://picsum.photos/id/1020/1600/900",
   "https://picsum.photos/id/1048/1600/900",
 ];
+
+
+// vehicleDetailsData.js
+export const vehicleDetails = {
+  description: `This 2017 Renault Clio Play is a standout choice with its exceptionally low mileage of just 38,202 miles, making it a truly remarkable find for its age. Powered by a 1.2 litre petrol engine and meeting Euro 6 emission standards, this hatchback offers a practical and efficient driving experience. Inside, you'll find a 2 x 20W radio complete with Bluetooth connectivity for seamless audio streaming and handsfree calls, alongside manual air conditioning to ensure your comfort in all conditions. The Clio Play is designed to be an appealing option, and its low insurance group rating further enhances its value, suggesting it could be more economical to run than many comparable vehicles. This combination of a well maintained, low mileage example with desirable features like Bluetooth and air conditioning, all within an accessible insurance bracket, makes this Renault Clio a sensible and attractive proposition for any driver.`,
+
+  features: [
+    "Glacier White",
+    "Windscreen Wipers - Variable Speed",
+    "USB Socket and Jack",
+    "Tyre Pressure Warning Light",
+    "Tyre Inflation Kit",
+    "Trip Computer",
+    "Steering Wheel - Height and Reach Adjustable",
+    "Steering Wheel - Black Grain with Chrome Insert",
+  ],
+
+  videoUrl: "https://www.youtube-nocookie.com/embed/s8KoeQEGv8o",
+};

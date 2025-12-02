@@ -3,18 +3,9 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const features = [
-  "Glacier White",
-  "Windscreen Wipers - Variable Speed",
-  "USB Socket and Jack",
-  "Tyre Pressure Warning Light",
-  "Tyre Inflation Kit",
-  "Trip Computer",
-  "Steering Wheel - Height and Reach Adjustable",
-  "Steering Wheel - Black Grain with Chrome Insert",
-];
+export default function VehicleDetailsSection({ data }) {
+  const { description, features, videoUrl } = data;
 
-export default function VehicleDetailsSection() {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
@@ -37,30 +28,18 @@ export default function VehicleDetailsSection() {
           {/* LEFT — FULL DESCRIPTION */}
           <div
             data-aos="fade-right"
-            className="bg-[#3F2E31] rounded-2xl border border-[#A7A1A2]/20 p-6 md:p-8 shadow-md shadow-[#3F2E31]"
+            className="bg-[#3F2E31] rounded-2xl border border-[#A7A1A2]/20 p-6 md:p-8 shadow-md shadow-[#3F2E31] flex flex-col"
           >
             <h3 className="text-2xl font-semibold mb-4 text-[#FCFCFC]">
               Full Description
             </h3>
 
-            <p className="text-[#A7A1A2] whitespace-pre-line leading-relaxed mb-6">
-              This 2017 Renault Clio Play is a standout choice with its exceptionally low
-              mileage of just 38,202 miles, making it a truly remarkable find for its age.
-              Powered by a 1.2 litre petrol engine and meeting Euro 6 emission standards,
-              this hatchback offers a practical and efficient driving experience. Inside,
-              you'll find a 2 x 20W radio complete with Bluetooth connectivity for seamless
-              audio streaming and handsfree calls, alongside manual air conditioning to
-              ensure your comfort in all conditions.
-
-              The Clio Play is designed to be an appealing option, and its low insurance
-              group rating further enhances its value, suggesting it could be more
-              economical to run than many comparable vehicles. This combination of a
-              well maintained, low mileage example with desirable features like Bluetooth
-              and air conditioning, all within an accessible insurance bracket, makes this
-              Renault Clio a sensible and attractive proposition for any driver.
+            {/* Updated description to preserve line breaks */}
+            <p className="text-[#A7A1A2] whitespace-pre-wrap leading-relaxed flex-1">
+              {description}
             </p>
 
-            <button className="border border-[#B40B1F] text-[#B40B1F] text-sm px-5 py-2 rounded-lg hover:bg-[#B40B1F] hover:text-[#FCFCFC] transition">
+            <button className="mt-6 self-start border border-[#B40B1F] text-[#B40B1F] text-sm px-5 py-2 rounded-lg hover:bg-[#B40B1F] hover:text-[#FCFCFC] transition">
               Read Full Description
             </button>
           </div>
@@ -78,8 +57,7 @@ export default function VehicleDetailsSection() {
 
             <div className="bg-[#3F2E31] rounded-2xl p-6 md:p-8 shadow-md shadow-[#3F2E31] relative">
               <div className="flex flex-col gap-4">
-
-                {features.map((item, index) => (
+                {features?.map((item, index) => (
                   <div
                     key={index}
                     data-aos="fade-up"
@@ -90,10 +68,8 @@ export default function VehicleDetailsSection() {
                     <span className="text-[#FCFCFC]">{item}</span>
                   </div>
                 ))}
-
               </div>
 
-              {/* Watermark */}
               <div className="absolute text-6xl font-bold text-[#A7A1A2]/10 right-4 bottom-4 pointer-events-none select-none">
                 Features
               </div>
@@ -108,7 +84,7 @@ export default function VehicleDetailsSection() {
         >
           <iframe
             className="w-full h-full"
-            src="https://www.youtube-nocookie.com/embed/s8KoeQEGv8o"
+            src={videoUrl}
             title="Vehicle Video"
             allowFullScreen
           />
