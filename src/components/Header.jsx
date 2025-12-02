@@ -60,7 +60,7 @@ export default function GarageNav() {
           <div className="hidden lg:flex flex-1 items-center justify-center gap-2 sm:gap-6">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/contact">Contact</NavLink>
-
+             <NavLink href="/buydetail">BuyDetail</NavLink>
             {/* Services dropdown */}
             <div className="relative">
               <button

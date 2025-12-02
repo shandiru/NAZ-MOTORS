@@ -22,7 +22,7 @@ export default function GallerySection() {
 
   return (
     <section
-      id="V-Gallery"
+      id="Gallery"
       className="py-6 md:py-10 bg-gradient-to-b from-[#1e1e1e] to-[#0f0f0f] rounded-b-3xl overflow-hidden relative"
     >
       <div className="max-w-6xl mx-auto px-4 relative z-10">
