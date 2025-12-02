@@ -20,12 +20,12 @@ export default function UnderTheBonnet() {
   ];
 
   return (
-    <div className="w-full px-4 py-12">
+    <div className="w-full px-4 py-12 bg-[#020000] dark:bg-[#020000] text-[#FCFCFC]">
       
       {/* Heading */}
       <h2
         data-aos="fade-up"
-        className="text-center text-3xl md:text-4xl font-bold mb-10 text-[#FCFCFC]"
+        className="text-center text-3xl md:text-4xl font-bold mb-10"
       >
         Under the Bonnet
       </h2>
@@ -33,7 +33,7 @@ export default function UnderTheBonnet() {
       {/* DARK BOX */}
       <div
         data-aos="fade-up"
-        className="bg-[#020000] rounded-2xl py-10 px-4 shadow-lg shadow-[#3F2E31]"
+        className="bg-[#020000] dark:bg-[#020000] rounded-2xl py-10 px-4 shadow-lg shadow-[#3F2E31]"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           
