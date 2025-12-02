@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const features = [
   "Glacier White",
@@ -13,12 +15,19 @@ const features = [
 ];
 
 export default function VehicleDetailsSection() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <section className="bg-[#020000] text-[#FCFCFC] py-16 px-6 md:px-10 lg:px-0">
       <div className="max-w-6xl mx-auto flex flex-col gap-12">
 
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-4xl font-bold">
+        <h2
+          data-aos="fade-up"
+          className="text-center text-3xl md:text-4xl font-bold"
+        >
           More about this Renault
         </h2>
 
@@ -26,7 +35,10 @@ export default function VehicleDetailsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
           {/* LEFT — FULL DESCRIPTION */}
-          <div className="bg-[#3F2E31] rounded-2xl border border-[#A7A1A2]/20 p-6 md:p-8 shadow-md shadow-[#3F2E31]">
+          <div
+            data-aos="fade-right"
+            className="bg-[#3F2E31] rounded-2xl border border-[#A7A1A2]/20 p-6 md:p-8 shadow-md shadow-[#3F2E31]"
+          >
             <h3 className="text-2xl font-semibold mb-4 text-[#FCFCFC]">
               Full Description
             </h3>
@@ -54,7 +66,7 @@ export default function VehicleDetailsSection() {
           </div>
 
           {/* RIGHT — HIGHLIGHT FEATURES */}
-          <div>
+          <div data-aos="fade-left">
             <div className="flex justify-between items-center mb-3">
               <h3 className="text-2xl font-semibold text-[#FCFCFC]">
                 Highlight Features
@@ -70,6 +82,8 @@ export default function VehicleDetailsSection() {
                 {features.map((item, index) => (
                   <div
                     key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 80}
                     className="border-b border-[#A7A1A2]/20 pb-3 flex items-start gap-3"
                   >
                     <span className="text-[#B40B1F] mt-1 text-xs">►</span>
@@ -88,7 +102,10 @@ export default function VehicleDetailsSection() {
         </div>
 
         {/* VIDEO SECTION */}
-        <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg shadow-[#3F2E31]">
+        <div
+          data-aos="zoom-in"
+          className="w-full aspect-video rounded-xl overflow-hidden shadow-lg shadow-[#3F2E31]"
+        >
           <iframe
             className="w-full h-full"
             src="https://www.youtube-nocookie.com/embed/s8KoeQEGv8o"
@@ -98,7 +115,10 @@ export default function VehicleDetailsSection() {
         </div>
 
         {/* DELIVERY QUOTE CARD */}
-        <div className="bg-[#3F2E31] rounded-2xl text-center py-10 px-6 shadow-md shadow-[#3F2E31]">
+        <div
+          data-aos="fade-up"
+          className="bg-[#3F2E31] rounded-2xl text-center py-10 px-6 shadow-md shadow-[#3F2E31]"
+        >
           <h3 className="text-3xl font-semibold mb-6 text-[#FCFCFC]">
             Wish to get this delivered? Get a Quote!
           </h3>

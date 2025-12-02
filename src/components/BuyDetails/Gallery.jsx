@@ -1,8 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function GallerySection() {
-  // Put all online car image URLs here
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
+  // Online images
   const images = [
     "https://picsum.photos/id/1011/1600/900",
     "https://picsum.photos/id/1015/1600/900",
@@ -13,44 +19,11 @@ export default function GallerySection() {
     "https://picsum.photos/id/1035/1600/900",
     "https://picsum.photos/id/1040/1600/900",
     "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900","https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    "https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900","https://picsum.photos/id/1040/1600/900",
-    "https://picsum.photos/id/1041/1600/900",
-    
-    "https://picsum.photos/id/1050/1600/900"
+    "https://picsum.photos/id/1050/1600/900",
+    "https://picsum.photos/id/1017/1600/900",
+    "https://picsum.photos/id/1018/1600/900",
+    "https://picsum.photos/id/1020/1600/900",
+    "https://picsum.photos/id/1048/1600/900",
   ];
 
   if (images.length < 2) return null;
@@ -58,7 +31,6 @@ export default function GallerySection() {
   const big = images.slice(0, 2);
   const thumbs = images.slice(2);
 
-  // Popup states
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -90,14 +62,19 @@ export default function GallerySection() {
       className="py-6 md:py-10 bg-[#020000] rounded-b-3xl overflow-hidden relative"
     >
       <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <h2 className="text-center text-2xl md:text-3xl font-bold text-[#FCFCFC] mb-6">
+
+        {/* HEADING */}
+        <h2
+          data-aos="fade-up"
+          className="text-center text-2xl md:text-3xl font-bold text-[#FCFCFC] mb-6"
+        >
           Photo Gallery
         </h2>
 
-        {/* TWO BIG IMAGES */}
+        {/* BIG IMAGES */}
         <div className="grid grid-cols-2 gap-3 mb-4">
           {big.map((url, index) => (
-            <div key={index} className="w-full">
+            <div key={index} data-aos="zoom-in" data-aos-delay={index * 150}>
               <img
                 src={url}
                 className="w-full h-full object-cover rounded-lg cursor-pointer"
@@ -110,7 +87,11 @@ export default function GallerySection() {
         {/* SMALL IMAGES */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-10 gap-2">
           {thumbs.map((url, index) => (
-            <div key={index} className="w-full">
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 50}
+            >
               <img
                 src={url}
                 className="w-full h-full object-cover rounded-lg cursor-pointer"
@@ -121,30 +102,39 @@ export default function GallerySection() {
         </div>
       </div>
 
-      {/* Watermark */}
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[90px] md:text-[140px] font-extrabold text-[#A7A1A2]/10 pointer-events-none select-none">
+      {/* WATERMARK */}
+      <div
+        data-aos="fade-in"
+        className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[90px] md:text-[140px] font-extrabold text-[#A7A1A2]/10 pointer-events-none select-none"
+      >
         Gallery
       </div>
 
-      {/* POPUP / LIGHTBOX */}
+      {/* LIGHTBOX POPUP */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-          {/* Close Button */}
+        <div
+          data-aos="fade-in"
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+        >
+          {/* CLOSE BUTTON */}
           <button
+            data-aos="fade-down"
             className="absolute top-6 right-6 text-[#FCFCFC] text-3xl font-bold"
             onClick={() => setIsOpen(false)}
           >
             ✕
           </button>
 
-          {/* Image */}
+          {/* MAIN IMAGE */}
           <img
+            data-aos="zoom-in"
             src={images[activeIndex]}
             className="max-w-[90%] max-h-[80%] rounded-xl shadow-xl border-4 border-[#B40B1F] transition-all duration-300"
           />
 
           {/* LEFT ARROW */}
           <button
+            data-aos="fade-right"
             className="absolute left-6 top-1/2 -translate-y-1/2 text-[#FCFCFC] text-5xl font-bold hover:text-[#B40B1F]"
             onClick={prevImage}
           >
@@ -153,6 +143,7 @@ export default function GallerySection() {
 
           {/* RIGHT ARROW */}
           <button
+            data-aos="fade-left"
             className="absolute right-6 top-1/2 -translate-y-1/2 text-[#FCFCFC] text-5xl font-bold hover:text-[#B40B1F]"
             onClick={nextImage}
           >
