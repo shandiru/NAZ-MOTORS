@@ -198,6 +198,9 @@ export default function ContactSection() {
               <p className="text-xs text-[#777] dark:text-gray-400">
                 * Required fields. We'll get back to you within 24 hours.
               </p>
+              <p className="text-xs text-[#777] dark:text-gray-400">
+                By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy
+              </p>
             </div>
           </div>
 
