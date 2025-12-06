@@ -146,25 +146,7 @@ const VehicleDetailsPage = ({ vehicle }) => {
                 ))}
               </div>
 
-              {/* Reserve Section */}
-              <div className="bg-gradient-to-br from-[#C8102E] to-black backdrop-blur border border-white/10 rounded-2xl p-6">
-                <h3 className="text-xl md:text-2xl font-bold mb-3">Wish to secure this Car?</h3>
-                <img
-                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=100&fit=crop"
-                  alt="Payment Partner"
-                  className="w-full rounded-lg mb-3 cursor-pointer opacity-90 hover:opacity-100 transition"
-                  onClick={() => setShowReserveModal(true)}
-                />
-                <button
-                  onClick={() => setShowReserveModal(true)}
-                  className="w-full bg-[#C8102E] hover:bg-red-600 text-white font-bold py-4 rounded-xl transition text-lg animate-pulse"
-                >
-                  Reserve for £100
-                </button>
-                <p className="text-xs opacity-75 mt-3 text-center">
-                  Reserve this vehicle immediately for a fully refundable £100. We will be in contact to confirm your order.
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>

@@ -78,43 +78,29 @@ export default function VehicleDetailsSection({ data }) {
         </div>
 
         {/* VIDEO SECTION */}
-        <div
-          data-aos="zoom-in"
-          className="w-full aspect-video rounded-xl overflow-hidden shadow-lg shadow-[#3F2E31]"
-        >
-          <iframe
-            className="w-full h-full"
-            src={videoUrl}
-            title="Vehicle Video"
-            allowFullScreen
-          />
-        </div>
+       
 
         {/* DELIVERY QUOTE CARD */}
-        <div
-          data-aos="fade-up"
-          className="bg-[#3F2E31] rounded-2xl text-center py-10 px-6 shadow-md shadow-[#3F2E31]"
-        >
-          <h3 className="text-3xl font-semibold mb-6 text-[#FCFCFC]">
-            Wish to get this delivered? Get a Quote!
-          </h3>
+<div
+  data-aos="fade-up"
+  className="bg-[#3F2E31] rounded-2xl text-center py-10 px-6 shadow-md shadow-[#3F2E31]"
+>
+  <h3 className="text-3xl font-semibold mb-6 text-[#FCFCFC]">
+    Wish to get this delivered? Get a Quote!
+  </h3>
 
-          <form className="max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
-            <input
-              type="text"
-              placeholder="Enter Your Postcode"
-              className="flex-1 bg-[#020000] border border-[#A7A1A2]/30 text-[#FCFCFC] px-4 py-3 rounded-lg focus:outline-none"
-            />
+  {/* CTA BUTTON ONLY */}
+  <div className="max-w-xl mx-auto">
+    <button className="bg-[#B40B1F] text-[#FCFCFC] px-8 py-3 rounded-lg font-semibold hover:bg-[#FCFCFC] hover:text-[#B40B1F] transition">
+      Get a Quote
+    </button>
+  </div>
 
-            <button className="bg-[#B40B1F] text-[#FCFCFC] px-6 py-3 rounded-lg font-semibold hover:bg-[#FCFCFC] hover:text-[#B40B1F] transition">
-              Calculate
-            </button>
-          </form>
+  <p className="text-[#A7A1A2] text-sm mt-4">
+    Delivery to mainland UK only, excludes NI, highlands, ferry crossing and toll costs.
+  </p>
+</div>
 
-          <p className="text-[#A7A1A2] text-sm mt-4">
-            Delivery to mainland UK only, excludes NI, highlands, ferry crossing and toll costs.
-          </p>
-        </div>
       </div>
     </section>
   );
