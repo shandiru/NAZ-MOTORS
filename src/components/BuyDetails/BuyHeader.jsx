@@ -22,7 +22,7 @@ const VehicleDetailsPage = ({ vehicle }) => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 py-4 md:py-8">
+      <div className="container mx-auto px-16 py-4 md:py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Left Column - Images */}
           <div className="lg:col-span-7 xl:col-span-8">

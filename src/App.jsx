@@ -20,6 +20,7 @@ import Service from "./Page/Service.jsx";
 import MechanicalPage from "./Page/MechanicalPage.jsx"
 import Tyres from "./Page/Tyres.jsx";
 import BuyDetails from "./Page/BuyDetails.jsx";
+import Ebay from "./Page/Ebay.jsx"
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -39,6 +40,8 @@ export default function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/services/all-second-hand-car-parts" element={<AllSecondHandCarParts />} />
            <Route path="/services/mechanical-repairs" element={<MechanicalPage />} />
+            <Route path="/ebay" element={<Ebay />} />
+
         </Routes>
       </main>
       <Footer />
