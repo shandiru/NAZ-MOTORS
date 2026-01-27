@@ -43,7 +43,7 @@ const BenefitsTopArrows = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="flex-1">
             <div className="flex items-center gap-2 text-black/60 dark:text-white/60 font-bold uppercase tracking-[0.2em] text-xs mb-6">
-              <span className="w-6 h-[1px] bg-[#B62025] dark:bg-[#FF4B4B]"></span>
+              <span className="w-6 h-[1px] bg-[#B62025] dark:text-[#FF4B4B]"></span>
               Benefits
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white leading-[1.1] max-w-2xl">
@@ -77,11 +77,13 @@ const BenefitsTopArrows = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3.2 },
             }}
-            className="!overflow-visible"
+            /* FIX 1: Ensure Swiper wrapper uses flex-stretch */
+            className="!overflow-visible swiper-stretch"
           >
             {slides.map((slide) => (
-              <SwiperSlide key={slide.id}>
-                <div className="bg-white dark:bg-[#111111] border border-black/5 dark:border-white/10 rounded-[2rem] p-8 h-full flex flex-col shadow-xl transition-all duration-300">
+              /* FIX 2: SwiperSlide must be h-full */
+              <SwiperSlide key={slide.id} className="!h-auto">
+                <div className="bg-white dark:bg-[#111111] border border-black/5 dark:border-white/10 rounded-[2rem] p-8 h-full flex flex-col shadow-xl transition-all duration-300 group">
                   {/* Image Container */}
                   <div className="flex justify-center mb-10 mt-4">
                     <div className="w-48 h-48 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center overflow-hidden">
@@ -95,9 +97,10 @@ const BenefitsTopArrows = () => {
 
                   {/* Text Content */}
                   <div className="flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-black dark:text-white mb-4 leading-tight group-hover:text-[#B62025] dark:group-hover:text-[#FF4B4B]">
+                    <h3 className="text-2xl font-bold text-black dark:text-white mb-4 leading-tight group-hover:text-[#B62025] dark:text-[#FF4B4B]">
                       {slide.title}
                     </h3>
+                    {/* FIX 3: flex-grow on paragraph ensures link stays at bottom */}
                     <p className="text-black/60 dark:text-white/60 text-lg mb-8 flex-grow leading-relaxed">
                       {slide.desc}
                     </p>
@@ -114,6 +117,13 @@ const BenefitsTopArrows = () => {
           </Swiper>
         </div>
       </div>
+      
+      {/* Required CSS for Swiper height matching */}
+      <style jsx global>{`
+        .swiper-stretch .swiper-wrapper {
+          display: flex;
+        }
+      `}</style>
     </section>
   );
 };
