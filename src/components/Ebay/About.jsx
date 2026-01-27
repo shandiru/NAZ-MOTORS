@@ -1,66 +1,124 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Layout, Layers, Box, Zap, Monitor, Maximize, MousePointer, Image as ImageIcon, Code, ShieldCheck } from 'lucide-react';
+import { 
+  Check, 
+  Wrench, 
+  Warehouse, 
+  ShieldCheck, 
+  Truck, 
+  Search, 
+  Users, 
+  DollarSign, 
+  Factory, 
+  Cog,
+  History,
+  Store
+} from 'lucide-react';
 
 const AboutSection = () => {
   const features = [
-    { title: "Modern design", desc: "Aesthetical & clean beautiful designs designed by senior art director.", icon: <Check /> },
-    { title: "30+ web pages", desc: "Unique ready-made static and CMS Collection pages include CMS connections.", icon: <Layout /> },
-    { title: "60+ UI Kit components", desc: "Pre-built different UI layouts, navigations, and sections for content and hero headers.", icon: <Layers /> },
-    { title: "30+ Symbols", desc: "More than 30 symbols are ready to use with override setup instances.", icon: <Box /> },
-    { title: "Unique animations", desc: "Uniquely developed interactions & animations only for the Karuso template.", icon: <Zap /> },
-    { title: "CMS ready to use", desc: "CMS collections and pages are set up and connected. You can copy/paste/delete content.", icon: <Monitor /> },
-    { title: "Responsive design", desc: "Fully responsive design on all devices using VW, em, and rem units for perfect layouts.", icon: <Maximize /> },
-    { title: "Fullscreen menu", desc: "Custom animated fullscreen aside menu in all responsive breakpoints.", icon: <MousePointer /> },
-    { title: "3D images", desc: "Set up 3D transforms for images and texts.", icon: <ImageIcon /> },
-    { title: "Well developed", desc: "Created by the Webflow professional partner.", icon: <Code /> },
-    { title: "Exclusively for Webflow", desc: "Available only in the Webflow marketplace.", icon: <ShieldCheck /> },
+    { 
+      title: "Direct Access to Stock", 
+      desc: "We run our own car scrapping facility, giving us direct access to high-quality inventory.", 
+      icon: <Factory size={16} /> 
+    },
+    { 
+      title: "Real In-House Expertise", 
+      desc: "Our operation is backed by real automotive experts, not just resellers.", 
+      icon: <Wrench size={16} /> 
+    },
+    { 
+      title: "Inspected and Tested", 
+      desc: "Every component is carefully checked before it’s listed and shipped to ensure safety.", 
+      icon: <Search size={16} /> 
+    },
+    { 
+      title: "Under One Roof", 
+      desc: "Parts are sourced, inspected, and dispatched from one location for total speed and control.", 
+      icon: <Warehouse size={16} /> 
+    },
+    { 
+      title: "Quality Standards", 
+      desc: "We focus on quality, safety, and performance standards with every single order.", 
+      icon: <ShieldCheck size={16} /> 
+    },
+    { 
+      title: "Fast Dispatch", 
+      desc: "Our warehouse setup allows for reliable availability and lightning-fast shipping.", 
+      icon: <Truck size={16} /> 
+    },
+    { 
+      title: "Support for All", 
+      desc: "We proudly support professional garages, mechanics, and individual car owners alike.", 
+      icon: <Users size={16} /> 
+    },
+    { 
+      title: "Sensible Costs", 
+      desc: "We keep costs affordable so you avoid unnecessary delays and high expenses.", 
+      icon: <DollarSign size={16} /> 
+    },
   ];
 
   return (
-    <section className="bg-white dark:bg-black py-20 px-6 md:px-20 font-sans transition-colors duration-300">
+    <section className="bg-white dark:bg-black py-20 px-6 md:px-20  transition-colors duration-300">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
         
-        {/* Left Side */}
+        {/* Left Side: Brand Story */}
         <div className="sticky top-20 h-fit">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-black dark:text-white mb-8">
-            Trendy & robust no-code CMS template ready to use for your showcase works. 
-            <span className="text-[#B62025] dark:text-[#FF4B4B]"> Easy and fast.</span>
-          </h2>
+          <div className="flex items-center gap-2 text-[#B62025] dark:text-[#FF4B4B] font-bold uppercase tracking-widest text-xs mb-4">
+            <span className="w-8 h-[2px] bg-[#B62025] dark:bg-[#FF4B4B]"></span>
+            Official eBay Store
+          </div>
           
-          <button className="group relative px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full overflow-hidden transition-all">
-            <span className="relative z-10 flex items-center gap-2 font-bold">
-              Main Homepage <span className="group-hover:translate-x-1 transition-transform">→</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-black dark:text-white mb-8">
+            NextDayParts: Powered by <span className="text-[#B62025] dark:text-[#FF4B4B]">Naz Motors.</span>
+          </h2>
+
+          <div className="space-y-6 text-black/70 dark:text-white/70 text-lg max-w-lg mb-10">
+            <p>
+              We supply reliable and affordable used car parts you can trust. Our goal is simple: 
+              <span className="font-bold text-black dark:text-white"> to help you get back on the road quickly.</span>
+            </p>
+            <p className="text-sm border-l-4 border-[#B62025] dark:border-[#FF4B4B] pl-4 italic">
+              "We operate from multiple warehouses filled with quality second-hand parts, ensuring 
+              we have exactly what you need when you need it."
+            </p>
+          </div>
+          
+          <button className="group relative px-10 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full overflow-hidden transition-all shadow-xl">
+            <span className="relative z-10 flex items-center gap-2 font-bold uppercase tracking-tight">
+              Browse Our Inventory <span className="group-hover:translate-x-1 transition-transform">→</span>
             </span>
-            {/* Hover Background - Uses Red */}
             <div className="absolute inset-0 bg-[#B62025] dark:bg-[#FF4B4B] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </button>
         </div>
 
-        {/* Right Side: Animated List */}
+        {/* Right Side: 12-Point Content Integration */}
         <div className="space-y-0">
           {features.map((item, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex gap-6 pb-10 border-l border-black/10 dark:border-white/10 pl-8 relative group"
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="flex gap-6 pb-12 border-l border-black/10 dark:border-white/10 pl-8 relative group"
             >
-              {/* Checkmark Node */}
+              {/* Dynamic Icon Node */}
               <div className="absolute -left-[17px] top-0 w-8 h-8 bg-white dark:bg-black border border-black dark:border-white rounded-full flex items-center justify-center z-10 
                               group-hover:bg-[#B62025] dark:group-hover:bg-[#FF4B4B] 
                               group-hover:border-[#B62025] dark:group-hover:border-[#FF4B4B] 
-                              transition-all duration-300">
-                <Check size={14} strokeWidth={4} className="text-black dark:text-white group-hover:text-white" />
+                              shadow-sm transition-all duration-300">
+                <div className="text-black dark:text-white group-hover:text-white">
+                  {item.icon}
+                </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-[#B62025] dark:text-[#FF4B4B] mb-2 uppercase tracking-tight">
+                <h3 className="text-xl font-bold text-[#B62025] dark:text-[#FF4B4B] mb-2 uppercase tracking-tighter">
                   {item.title}
                 </h3>
-                <p className="text-black/70 dark:text-white/70 leading-relaxed max-w-md text-sm md:text-base">
+                <p className="text-black/80 dark:text-white/80 leading-relaxed max-w-md text-sm md:text-base">
                   {item.desc}
                 </p>
               </div>
