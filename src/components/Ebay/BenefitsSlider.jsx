@@ -9,32 +9,79 @@ import 'swiper/css/navigation';
 
 const BenefitsTopArrows = () => {
   const slides = [
-    {
-      id: 1,
-      image: "https://cdn.prod.website-files.com/6219607d9b553d9c17ba8d9a/622cfbee02a6351e72be3fe5_Mask%20Group.png",
-      title: "See where your efforts are paying off.",
-      desc: "Measure social media analytics with accurate, auto-generated reports. Know what’s getting customers.",
-    },
-    {
-      id: 2,
-      image: "https://cdn.prod.website-files.com/6219607d9b553d9c17ba8d9a/622cfcda79149c27803e6a63_Mask%20Group%201.png",
-      title: "Adjust your strategy in real-time.",
-      desc: "Don’t wait till you lose hundreds of dollars to rework your campaigns. Make changes faster.",
-    },
-    {
-      id: 3,
-      image: "https://cdn.prod.website-files.com/6219607d9b553d9c17ba8d9a/622cfcd91b24b4ee9584abfc_Mask%20Group%202.png",
-      title: "Get down in the nitty-gritty of your data.",
-      desc: "Track your performance across channels, campaigns and customer profiles.",
-    },
-    {
-      id: 4,
-      image: "https://cdn.prod.website-files.com/6219607d9b553d9c17ba8d9a/622cfcd9a1d15a4f5ad2f432_Mask%20Group%203.png",
-      title: "Analyze your growth trends.",
-      desc: "Understand how your audience grows over time with detailed visual charts.",
-    },
-  ];
-
+  {
+    id: 1,
+    image: "https://images.unsplash.com/photo-1589325068767-00e4a9f91a0d?w=400&h=300&fit=crop",
+    title: "ALLOYS",
+    desc: "Quality second-hand Wheel Rims for various vehicle makes and models.",
+  },
+  {
+    id: 2,
+    image: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=400&h=300&fit=crop",
+    title: "BONNET",
+    desc: "Durable Engine Covers and front-end body panels in excellent condition.",
+  },
+  {
+    id: 3,
+    image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop",
+    title: "BUMPER",
+    desc: "Front and rear Impact Protection components to keep your vehicle safe.",
+  },
+  {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    title: "DOOR/BOOT LOCKS",
+    desc: "Reliable Security Hardware and locking mechanisms for doors and trunks.",
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=300&fit=crop",
+    title: "DOORS",
+    desc: "Complete Vehicle Doors available for a wide range of automotive brands.",
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1486262715933-a9b06d6b564f?w=400&h=300&fit=crop",
+    title: "ENGINES",
+    desc: "Fully tested Complete Engine Units ready for installation.",
+  },
+  {
+    id: 7,
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=300&fit=crop",
+    title: "FOR BREAKING",
+    desc: "Extensive Parts Inventory from vehicles currently being dismantled.",
+  },
+  {
+    id: 8,
+    image: "https://images.unsplash.com/photo-1552864370-2e85b0f5a13c?w=400&h=300&fit=crop",
+    title: "FRONT PANEL",
+    desc: "Essential Body Components and structural front-end assemblies.",
+  },
+  {
+    id: 9,
+    image: "https://images.unsplash.com/photo-1609315352865-a63e89fb8b63?w=400&h=300&fit=crop",
+    title: "FUEL CAPS",
+    desc: "Replacement Tank Covers and fuel system sealing components.",
+  },
+  {
+    id: 10,
+    image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?w=400&h=300&fit=crop",
+    title: "GEAR SELECTOR",
+    desc: "Precision Shift Controls for both manual and automatic transmissions.",
+  },
+  {
+    id: 11,
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=300&fit=crop",
+    title: "GEARBOX",
+    desc: "Tested Transmissions and drivetrain components for smooth performance.",
+  },
+  {
+    id: 12,
+    image: "https://images.unsplash.com/photo-1606611013016-969c19d4532c?w=400&h=300&fit=crop",
+    title: "GLOVE BOX",
+    desc: "Interior Dashboard Storage compartments and trim accessories.",
+  }
+];
   return (
     <section className="bg-white dark:bg-black py-24 px-6 md:px-12 lg:px-20 overflow-hidden min-h-screen transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
@@ -105,11 +152,7 @@ const BenefitsTopArrows = () => {
                       {slide.desc}
                     </p>
                     
-                    {/* Learn More Link */}
-                    <a href="#" className="inline-flex items-center gap-2 text-[#B62025] dark:text-[#FF4B4B] font-bold text-lg group w-fit">
-                      Learn More 
-                      <span className="group-hover:translate-x-1 transition-transform">→</span>
-                    </a>
+                   
                   </div>
                 </div>
               </SwiperSlide>
