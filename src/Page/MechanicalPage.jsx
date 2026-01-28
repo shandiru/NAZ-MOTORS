@@ -6,10 +6,12 @@ import MechanicalServices from "../components/ServiceSection/Mechanical/Mechanic
 
 import MechanicalTyres from "../components/ServiceSection/Mechanical/MechanicalTyres";
 import EmergencyCTA from "../components/ServiceSection/Mechanical/EmergencyCTA";
+import Header from "../components/Header";
 
 export default function MechanicalPage() {
   return (
     <div>
+      <Header />
       {/* Hero */}
       <section >
        <MechanicalHero />

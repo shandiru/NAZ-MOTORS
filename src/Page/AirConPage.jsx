@@ -6,10 +6,12 @@ import AirConServices from "../components/ServiceSection/AirConPage/AirConServic
 
 import WhyServiceAirConditioning from "../components/ServiceSection/AirConPage/WhyServiceAirConditioning";
 import EmergencyCTA from "../components/ServiceSection/AirConPage/EmergencyCTA";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <div>
+      <Header />
       {/* Hero */}
       <section >
        <AirConHero />

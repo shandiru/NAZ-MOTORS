@@ -6,14 +6,16 @@ import ServicesSection from "../components/HomePage/ServicesSection.jsx";
 import WhyChooseSection from "../components/HomePage/WhyChooseSection.jsx";
 import Review from "../components/HomePage/Review.jsx";
 import FindUs from "../components/HomePage/Findus.jsx";
+import Header from "../components/Header.jsx";
+
 export default function Home() {
   return (
     <div>
+       <Header />
       {/* Hero */}
       <section id="hero">
         <HeroSection />
       </section>
-
       {/* Services */}
       <section id="services">
         <ServicesSection />

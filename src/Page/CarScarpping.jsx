@@ -8,10 +8,12 @@ import MajorServices from "../components/ServiceSection/CarScarpping/MajorServic
 import VehicleTypes from "../components/ServiceSection/CarScarpping/VehicleTypes.jsx";
 import TechnicianExperienceSection from "../components/ServiceSection/CarScarpping/TechnicianExperienceSection.jsx";
 import EmergencyCTA from "../components/ServiceSection/CarScarpping/EmergencyCTA.jsx";
+import Header from "../components/Header.jsx";
 
 export default function CarScarpping() {
     return (
         <div>
+            <Header />
             <section >
                 <MotHero />
             </section>
