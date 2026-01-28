@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
@@ -13,14 +12,10 @@ import {
   FaClock,
   FaMapMarkerAlt,
   FaDirections,
+  FaWhatsapp, // Added WhatsApp icon
 } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// EmailJS credentials
-const SERVICE_ID = "service_2u9sb2c";
-const TEMPLATE_ID = "template_db0pgim";
-const USER_ID = "ddjdtu50sL-rnwvZW";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -56,40 +51,35 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validation
+    if (!formData.name || !formData.phone || !formData.message) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
     if (!phoneRegex.test(formData.phone)) {
       setFormErrors({ ...formErrors, phone: "Invalid phone number" });
       return;
-    } else {
-      setFormErrors({ ...formErrors, phone: "" });
     }
 
-    if (!emailRegex.test(formData.email)) {
-      setFormErrors({ ...formErrors, email: "Invalid email address" });
-      return;
-    } else {
-      setFormErrors({ ...formErrors, email: "" });
-    }
+    // Construct WhatsApp Message
+    const whatsappNumber = "447850179151"; // International format without '+'
+    const text = `*New Enquiry from Naz Motors Website*%0A
+*Name:* ${formData.name}%0A
+*Phone:* ${formData.phone}%0A
+*Email:* ${formData.email || "Not provided"}%0A
+*Vehicle:* ${formData.vehicle || "Not provided"}%0A
+*Service:* ${formData.service || "General Enquiry"}%0A
+*Message:* ${formData.message}`;
 
-    emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
-      .then(() => {
-        toast.success("Message sent successfully!");
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          vehicle: "",
-          service: "",
-          message: "",
-        });
-      })
-      .catch(() => {
-        toast.error("Failed to send message, please try again.");
-      });
+    // Open WhatsApp
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
+    
+    toast.success("Opening WhatsApp...");
   };
 
   return (
-    <section className="py-16 bg-[#F3F6F4] dark:bg-[#0B0F0C] overflow-x-hidden">
+    <section className="py-16 bg-white dark:bg-black overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* FORM */}
@@ -100,11 +90,11 @@ export default function ContactSection() {
           >
             <div className="px-6">
               <div className="text-2xl font-bold flex items-center text-[#111827] dark:text-gray-100">
-                <FaCommentDots className="mr-2 h-5 w-5 text-[#C8102E]" />
-                Send Us a Message
+                <FaWhatsapp className="mr-2 h-6 w-6 text-[#25D366]" />
+                Contact via WhatsApp
               </div>
               <p className="text-sm mt-1 text-[#555] dark:text-gray-400">
-                Get in touch for quotes, bookings, or any questions about our services.
+                Send us a message and we'll reply as soon as possible.
               </p>
             </div>
 
@@ -156,7 +146,7 @@ export default function ContactSection() {
                 <select
                   id="service"
                   name="service"
-                  className="w-full px-3 py-2 rounded-md border bg-white dark:bg-[#1B1E24] text-[#111827] dark:text-white border-[#E6EAE7] dark:border-white/10 hover:border-[#C8102E] focus:border-[#C8102E] focus:ring-[#C8102E]"
+                  className="w-full px-3 py-2 rounded-md border bg-white dark:bg-[#1B1E24] text-[#111827] dark:text-white border-[#E6EAE7] dark:border-white/10 hover:border-[#B62025] focus:border-[#B62025] focus:ring-[#B62025]"
                   value={formData.service}
                   onChange={handleChange}
                 >
@@ -181,7 +171,7 @@ export default function ContactSection() {
                   name="message"
                   rows={4}
                   placeholder="Please describe your requirements..."
-                  className="w-full rounded-md border px-3 py-2 bg-white dark:bg-[#1B1E24] text-[#111827] dark:text-white dark:border-white/10"
+                  className="w-full rounded-md border px-3 py-2 bg-white dark:bg-[#1B1E24] text-[#111827] dark:text-white dark:border-white/10 focus:ring-[#B62025] focus:border-[#B62025]"
                   value={formData.message}
                   onChange={handleChange}
                 />
@@ -189,17 +179,14 @@ export default function ContactSection() {
 
               <button
                 onClick={handleSubmit}
-                className="inline-flex items-center justify-center gap-2 h-9 w-full rounded-md font-semibold transition-colors bg-[#C8102E] text-white hover:shadow-md"
+                className="inline-flex items-center justify-center gap-2 h-10 w-full rounded-md font-semibold transition-colors bg-[#B62025] dark:bg-[#FF4B4B] text-white hover:shadow-lg active:scale-[0.98]"
               >
-                <FaCommentDots className="h-4 w-4" />
-                Send Message
+                <FaWhatsapp className="h-5 w-5" />
+                Send via WhatsApp
               </button>
 
               <p className="text-xs text-[#777] dark:text-gray-400">
-                * Required fields. We'll get back to you within 24 hours.
-              </p>
-              <p className="text-xs text-[#777] dark:text-gray-400">
-                By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy
+                By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy.
               </p>
             </div>
           </div>
@@ -217,19 +204,19 @@ export default function ContactSection() {
 
             <SideCard data-aos="fade-left" title="Find Us" icon={<FaMapMarkerAlt className="h-5 w-5" />}>
               <div className="space-y-1 mb-4">
-                <p className="font-semibold">Naz Motors Ltd</p>
+                <p className="font-semibold text-[#111827] dark:text-white">Naz Motors Ltd</p>
                 <p className="text-sm text-[#555] dark:text-gray-400">
                   80 Ravensbridge Drive, Leicester, LE4 0BX
                 </p>
               </div>
 
               <a
-                href="https://www.google.com/maps/place/80+Ravensbridge+Dr,+Leicester/@52.645302,-1.142423,14z/data=!4m5!3m4!1s0x487760fba7418895:0xed69d527bfa6398f!8m2!3d52.6466316!4d-1.1449763?hl=en-GB"
+                href="https://www.google.com/maps/dir/?api=1&destination=LE4+0BX"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <button className="h-9 w-full rounded-md border px-4 py-2 text-sm font-medium flex items-center justify-center bg-white dark:bg-[#1B1E24] text-[#111827] dark:text-white border-[#E6EAE7] dark:border-white/10 hover:shadow">
-                  <FaDirections className="mr-2 h-4 w-4" />
+                  <FaDirections className="mr-2 h-4 w-4 text-[#B62025] dark:text-[#FF4B4B]" />
                   View on Google Maps
                 </button>
               </a>
@@ -264,13 +251,13 @@ function FormInput({ id, label, placeholder, icon, value, onChange, type = "text
           name={id}
           type={type}
           placeholder={placeholder}
-          className={`h-9 w-full rounded-md border bg-white dark:bg-[#1B1E24] px-3 pl-10 text-[#111827] dark:text-white ${
+          className={`h-10 w-full rounded-md border bg-white dark:bg-[#1B1E24] px-3 pl-10 text-[#111827] dark:text-white outline-none focus:ring-1 focus:ring-[#B62025] ${
             error ? "border-red-500" : "border-[#E6EAE7] dark:border-white/10"
           }`}
           value={value}
           onChange={onChange}
         />
-        {error && <p className="text-xs text-red-500 mt-1">{error}</p>}
+        {error && <p className="text-xs text-red-500 mt-1 font-medium">{error}</p>}
       </div>
     </div>
   );
@@ -284,7 +271,7 @@ function SideCard({ title, icon, children, ...props }) {
     >
       <div className="px-6 mb-2">
         <div className="text-xl font-bold flex items-center text-[#111827] dark:text-white">
-          {icon && <span className="mr-2 text-[#C8102E]">{icon}</span>}
+          {icon && <span className="mr-2 text-[#B62025] dark:text-[#FF4B4B]">{icon}</span>}
           {title}
         </div>
       </div>
@@ -295,9 +282,9 @@ function SideCard({ title, icon, children, ...props }) {
 
 function HoursRow({ day, time, muted }) {
   return (
-    <div className="flex items-center justify-between py-1">
+    <div className="flex items-center justify-between py-1 border-b border-gray-100 dark:border-white/5 last:border-0">
       <span className="font-medium text-[#111827] dark:text-white">{day}</span>
-      <span className={`text-sm ${muted ? "text-gray-400" : "text-[#111827] dark:text-white"}`}>
+      <span className={`text-sm ${muted ? "text-gray-400 italic" : "text-[#111827] dark:text-white"}`}>
         {time}
       </span>
     </div>
