@@ -49,12 +49,12 @@ export default function EbayHeader() {
 
           {/* DESKTOP NAV (Hidden < 1024px) */}
           <div className="hidden lg:flex items-center gap-4">
-            <NavLink href="/">Home</NavLink>
+            <NavLink className="font-bold text-gray-600" href="/"><span className="font-bold text-gray-600">Home</span></NavLink>
             
             {/* Services Dropdown */}
             <div className="relative" onMouseEnter={() => setSvcOpen(true)} onMouseLeave={() => setSvcOpen(false)}>
               <button className="flex items-center gap-1 font-medium px-3 py-2 hover:text-[#B62025] dark:hover:text-[#FF4B4B] transition-colors">
-                <span>Services</span>
+                <span className="font-bold text-gray-600">Services</span>
                 <FaChevronDown className={`h-3 w-3 transition-transform ${svcOpen ? "rotate-180" : ""}`} />
               </button>
 
@@ -67,9 +67,9 @@ export default function EbayHeader() {
               )}
             </div>
 
-            <NavLink href="/contact">Contact</NavLink>
-            <NavLink href="/buydetail">BuyDetail</NavLink>
-            <NavLink href="/ebay">eBay</NavLink>
+            <NavLink href="/contact"><span className="font-bold text-gray-600">Contact</span></NavLink>
+            <NavLink  href="/buydetail"><span className="font-bold text-gray-600">BuyDetail</span></NavLink>
+            <a target="_blank" className="font-bold text-gray-600" href="https://www.ebay.co.uk/str/nextdaypartsltd?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=7zQt8k5DSfu&sssrc=3418065&ssuid=7zQt8k5DSfu&stype=1&widget_ver=artemis&media=WHATS_APP">Shop</a>
           </div>
 
           {/* RIGHT UTILITIES (Desktop) */}
@@ -120,7 +120,7 @@ export default function EbayHeader() {
 
           <a href="/contact" className="text-lg font-semibold border-b pb-2 dark:border-white/5">Contact</a>
           <a href="/buydetail" className="text-lg font-semibold border-b pb-2 dark:border-white/5">BuyDetail</a>
-          <a href="/ebay" className="text-lg font-semibold border-b pb-2 dark:border-white/5">eBay</a>
+          <a target="_blank" href="https://www.ebay.co.uk/str/nextdaypartsltd?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=7zQt8k5DSfu&sssrc=3418065&ssuid=7zQt8k5DSfu&stype=1&widget_ver=artemis&media=WHATS_APP" className="text-lg font-semibold border-b pb-2 dark:border-white/5">Shop</a>
 
           {/* Mobile Contact Info */}
           <div className="mt-6 space-y-4">

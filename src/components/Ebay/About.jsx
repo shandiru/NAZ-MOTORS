@@ -81,12 +81,12 @@ const AboutSection = () => {
             </p>
           </div>
           
-          <button className="group relative w-full sm:w-auto px-10 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full overflow-hidden transition-all shadow-xl">
+          <a target="_blank" href='https://www.ebay.co.uk/str/nextdaypartsltd?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=7zQt8k5DSfu&sssrc=3418065&ssuid=7zQt8k5DSfu&stype=1&widget_ver=artemis&media=WHATS_APP' className="group relative w-full sm:w-auto px-10 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full overflow-hidden transition-all shadow-xl">
             <span className="relative z-10 flex items-center justify-center gap-2 font-bold uppercase tracking-tight">
               Browse Our Inventory <span className="group-hover:translate-x-1 transition-transform">→</span>
             </span>
             <div className="absolute inset-0 bg-[#B62025] dark:text-[#FF4B4B] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-          </button>
+          </a>
         </div>
 
         {/* Right Side: Features Timeline */}
