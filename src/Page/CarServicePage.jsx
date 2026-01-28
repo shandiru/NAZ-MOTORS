@@ -8,42 +8,43 @@ import MajorServices from "../components/ServiceSection/CarServicePage/MajorServ
 import VehicleTypes from "../components/ServiceSection/CarServicePage/VehicleTypes.jsx";
 import TechnicianExperienceSection from "../components/ServiceSection/CarServicePage/TechnicianExperienceSection.jsx";
 import EmergencyCTA from "../components/ServiceSection/CarServicePage/EmergencyCTA.jsx";
+import Header from "../components/Header.jsx";
 
 export default function Home() {
   return (
     <div>
-
+      <Header />
       <section >
-       <MotHero />
+        <MotHero />
       </section>
       <section >
-       <AutomotiveServices/>
+        <AutomotiveServices />
       </section>
-       <section >
-       <MajorServices/>
-      </section>
-
-       <section >
-       <VehicleTypes/>
+      <section >
+        <MajorServices />
       </section>
 
       <section >
-       <TechnicianExperienceSection/>
+        <VehicleTypes />
       </section>
-      
-        <section >
-       <EmergencyCTA/>
+
+      <section >
+        <TechnicianExperienceSection />
       </section>
-      
 
-    
-
-
-
+      <section >
+        <EmergencyCTA />
+      </section>
 
 
 
-   
+
+
+
+
+
+
+
     </div>
   );
 }

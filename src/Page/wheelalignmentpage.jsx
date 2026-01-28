@@ -23,16 +23,9 @@ export default function Home() {
         <section >
        <WhyAlignmentSection />
       </section>
-
        <section >
        <EmergencyCTA />
-      </section>
-
-
-
-
-
-   
+      </section>  
     </div>
   );
 }

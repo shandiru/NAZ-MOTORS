@@ -8,11 +8,12 @@ import MajorServices from "../components/ServiceSection/Service/MajorServices.js
 import VehicleTypes from "../components/ServiceSection/Service/VehicleTypes.jsx";
 import TechnicianExperienceSection from "../components/ServiceSection/Service/TechnicianExperienceSection.jsx";
 import EmergencyCTA from "../components/ServiceSection/Service/EmergencyCTA.jsx";
+import Header from "../components/Header.jsx";
 
 export default function Service() {
     return (
         <div>
-
+            <Header />
             <section >
                 <MotHero />
             </section>

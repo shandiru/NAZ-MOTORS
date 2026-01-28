@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 
-export default function Header() {
+export default function EbayHeader() {
   const [open, setOpen] = useState(false);
   const [svcOpen, setSvcOpen] = useState(false);
   const [svcOpenMobile, setSvcOpenMobile] = useState(false);
@@ -41,9 +41,9 @@ export default function Header() {
           {/* LOGO */}
           <a href="/" className="flex items-center gap-2 z-50">
             <img
-              src="/logo.png"
+              src="/next.png"
               alt="nazmotors"
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-18 w-auto object-contain"
             />
           </a>
 
