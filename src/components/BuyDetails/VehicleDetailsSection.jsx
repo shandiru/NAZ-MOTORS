@@ -90,11 +90,15 @@ export default function VehicleDetailsSection({ data }) {
   </h3>
 
   {/* CTA BUTTON ONLY */}
-  <div className="max-w-xl mx-auto">
-    <button className="bg-[#B40B1F] text-[#FCFCFC] px-8 py-3 rounded-lg font-semibold hover:bg-[#FCFCFC] hover:text-[#B40B1F] transition">
-      Get a Quote
-    </button>
-  </div>
+ <div className="max-w-xl mx-auto">
+  <a
+    href="tel:01162515961"
+    className="inline-block bg-[#B40B1F] text-[#FCFCFC] px-8 py-3 rounded-lg font-semibold hover:bg-[#FCFCFC] hover:text-[#B40B1F] transition"
+  >
+    Get a Quote
+  </a>
+</div>
+
 
   <p className="text-[#A7A1A2] text-sm mt-4">
     Delivery to mainland UK only, excludes NI, highlands, ferry crossing and toll costs.

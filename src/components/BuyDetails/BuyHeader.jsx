@@ -64,9 +64,8 @@ const VehicleDetailsPage = ({ vehicle }) => {
                   <button
                     key={idx}
                     onClick={() => setCurrentImageIndex(idx)}
-                    className={`rounded-lg overflow-hidden border-2 transition ${
-                      currentImageIndex === idx ? 'border-blue-400' : 'border-transparent opacity-60 hover:opacity-100'
-                    }`}
+                    className={`rounded-lg overflow-hidden border-2 transition ${currentImageIndex === idx ? 'border-blue-400' : 'border-transparent opacity-60 hover:opacity-100'
+                      }`}
                   >
                     <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-16 sm:h-20 object-cover" />
                   </button>
@@ -104,33 +103,29 @@ const VehicleDetailsPage = ({ vehicle }) => {
 
               {/* Pricing Cards */}
               <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                <div className="bg-[#C8102E] rounded-2xl p-6 text-center">
-                  <div className="text-sm opacity-75 mb-2">Finance this Car from</div>
-                  <div className="text-4xl font-bold mb-3">£{vehicle.monthlyPayment}</div>
-                  <button className="bg-white text-black hover:bg-blue-50 px-6 py-2 rounded-full font-semibold transition text-sm">
-                    Apply Now
-                  </button>
-                </div>
+
                 <div className="bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl p-6 text-center">
                   <div className="text-sm opacity-75 mb-2">Buy this Car</div>
                   <div className="text-4xl font-bold mb-3">£{vehicle.price.toLocaleString()}</div>
                   <div className="flex flex-col sm:flex-row lg:flex-col gap-2">
-                    <button
-                      onClick={() => setShowEnquiryModal(true)}
-                      className="flex-1 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full font-semibold transition text-sm border border-white/20"
+                    <a
+                      href="tel:01162515961"
+                      className="flex-1 text-center bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full font-semibold transition text-sm border border-white/20"
                     >
                       Enquire Now
-                    </button>
+                    </a>
+
                     <div className="flex-1">
-                      <button
-                        onClick={() => setShowReserveModal(true)}
-                        className="w-full bg-[#C8102E] hover:bg-red-600 px-4 py-2 rounded-full font-semibold transition text-sm animate-pulse"
+                      <a
+                        href="tel:01162515961"
+                        className="block text-center bg-[#C8102E] hover:bg-red-600 px-4 py-2 rounded-full font-semibold transition text-sm animate-pulse"
                       >
-                        Reserve for £100
-                      </button>
+                        Call & Reserve for £100
+                      </a>
                       <div className="text-xs opacity-50 mt-1">Fully Refundable</div>
                     </div>
                   </div>
+
                 </div>
               </div>
 
@@ -146,7 +141,7 @@ const VehicleDetailsPage = ({ vehicle }) => {
                 ))}
               </div>
 
-              
+
             </div>
           </div>
         </div>

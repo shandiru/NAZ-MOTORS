@@ -68,7 +68,7 @@ export default function EbayHeader() {
             </div>
 
             <NavLink href="/contact"><span className="font-bold text-gray-600">Contact</span></NavLink>
-            <NavLink  href="/buydetail"><span className="font-bold text-gray-600">BuyDetail</span></NavLink>
+            <NavLink  href="/car-sales"><span className="font-bold text-gray-600">Car Sales</span></NavLink>
             <a target="_blank" className="font-bold text-gray-600" href="https://www.ebay.co.uk/str/nextdaypartsltd?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=7zQt8k5DSfu&sssrc=3418065&ssuid=7zQt8k5DSfu&stype=1&widget_ver=artemis&media=WHATS_APP">Shop</a>
           </div>
 
@@ -119,7 +119,7 @@ export default function EbayHeader() {
           </div>
 
           <a href="/contact" className="text-lg font-semibold border-b pb-2 dark:border-white/5">Contact</a>
-          <a href="/buydetail" className="text-lg font-semibold border-b pb-2 dark:border-white/5">BuyDetail</a>
+          <a href="/car-sales" className="text-lg font-semibold border-b pb-2 dark:border-white/5">Car Sales</a>
           <a target="_blank" href="https://www.ebay.co.uk/str/nextdaypartsltd?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=7zQt8k5DSfu&sssrc=3418065&ssuid=7zQt8k5DSfu&stype=1&widget_ver=artemis&media=WHATS_APP" className="text-lg font-semibold border-b pb-2 dark:border-white/5">Shop</a>
 
           {/* Mobile Contact Info */}

@@ -68,7 +68,7 @@ export default function Header() {
             </div>
 
             <NavLink href="/contact">Contact</NavLink>
-            <NavLink href="/buydetail">BuyDetail</NavLink>
+            <NavLink href="/car-sales">Car Sales</NavLink>
             <NavLink href="/ebay">eBay</NavLink>
           </div>
 
@@ -119,7 +119,7 @@ export default function Header() {
           </div>
 
           <a href="/contact" className="text-lg font-semibold border-b pb-2 dark:border-white/5">Contact</a>
-          <a href="/buydetail" className="text-lg font-semibold border-b pb-2 dark:border-white/5">BuyDetail</a>
+          <a href="/car-sales" className="text-lg font-semibold border-b pb-2 dark:border-white/5">Car Sales</a>
           <a href="/ebay" className="text-lg font-semibold border-b pb-2 dark:border-white/5">eBay</a>
 
           {/* Mobile Contact Info */}
